@@ -18,7 +18,9 @@
 		height: 3em;
 		text-align: center;
 		color: #ffffff;
-
+		position: fixed;
+		top: 0em;
+		z-index: 1;
 	}
 	.fanhui{
 		width: 10%;
@@ -37,13 +39,15 @@
 		margin-right: auto;
 	}
 	.beijing{
+
 		position: relative;
-		
+		top:;
 		width: 100%;
-		height: 9em;
+		min-height:7em;
 		background-image: url(a.png);
 		background-repeat: no-repeat;
 		background-size: 100%;
+
 	}
 	.touxiang{
 		text-align: center;
@@ -52,42 +56,164 @@
 		transform: translateY(-50%);
 		float: left;
 		
-		width: 30%;
+		width: 5em;
+		padding-left: 1em; 
 		height:5em;
     	
-
-
+	
 	}
+	.jiange{padding-top: 2.5em;
+		width: 100%;}
 	.jieshao{
 		float: right;
 		width: 70%;
 		height: 5em;
 	}
 	.wenben{
-		padding-top: 2em;
+		padding-top: 3em;
 		color: #ffffff;
-		width: 100%;
+		
 		height: 4em;
-	}
-	.caidan{
-		width: 100%;
-		height: 3em;
+		padding-left: 7em;
 	}
 	.zuobian{
-		padding-left: 2em;
 		float: left;
-		width:8%;
+		width:2em;
 		height: 3em;
 		line-height: 3em;
+		padding-top: 0.5em;
 		
 
 	}
 	.youbian{
-		float: right;
-		width: 90%;
+		float: left;
+		width: 50%;
 		height: 3em;
 		line-height: 3em;
 
+	}
+	.neirong{
+
+		height: 3em;
+		width: 100%;
+		border-bottom: 1px solid#adadad;
+
+	}
+	.neirong1{
+		float: left;
+		width:1em;
+		height: 3em;
+		line-height: 3em;
+		padding-top: 0.3em;
+		}
+	.neirong2{
+			width: 4em;
+			height: 3em;
+			line-height: 3em;
+			float: left;
+			padding-left: 1em;
+
+		}
+	.neirong3{
+		float: left;
+		width: 5em;
+		height: 3em;
+		line-height: 3em;
+		color: #adadad;
+		padding-left: 1em;
+
+	}
+	.neirong4{
+			width: 6em;
+			height: 3em;
+			line-height: 3em;
+			float: left;
+			padding-left: 1em;
+			color: #ff0000;
+
+		}
+	.neirong5{
+
+		min-height: auto;
+		width: 100%;
+		border-bottom: 1px solid#adadad;
+		display: flex;
+		align-items:center; display: -webkit-flex
+
+
+	}
+	.neirong6{
+			width: 5em;
+			height:auto;
+			flex:none;
+			line-height:auto;
+			float: left;
+			padding-left: 1em;
+			color: #adadad;
+
+
+		}
+	.neirong7{
+		flex:1;
+		margin-right: 5em
+		/*overflow:hidden;*/
+		height: auto;
+		line-height: 2em;
+		text-align: left;
+		padding-left: 1em;
+
+
+	}
+
+	.footer{
+		width: 100%;
+		background-color: #ffffff;
+		width: 100%;
+		height: 3em;
+		text-align: center;
+		
+		position: fixed;
+		bottom: 0;
+ 
+	}
+	.footer1{/*
+		padding-left: 1%;*/
+		float: left;
+		width: 45%;
+		border-radius: 10px;
+		border-width: 1px;
+		border-style:solid;
+		color: #66b3ff;
+		border-color: #66b3ff;
+	/*background-color: orange;
+	*/
+		height: 2.4em;
+		line-height: 2.5em;
+	}
+	p{margin:0;padding:0}
+	/*body{
+		font-size: 1em;
+	}*/
+	.footer2{
+		color: #ffffff;
+		float: left;
+		width:46%;
+		height: 2.4em;
+		line-height: 2.5em;
+		float: right;
+		border-radius: 10px;
+		border-width: 1px;
+		border-style:solid;
+		
+		border-color: #66b3ff;
+		margin-right: 1em;
+		background-color: #66b3ff;
+		/*border-width: 3px;
+		border-style:solid;
+		border-color: #66b3ff;
+		padding-right: 1%;
+		
+*/
 	}
 
 			
@@ -113,19 +239,88 @@
 				个人主页
 				</div>
 				</div>
+				<div class="jiange">
 			<div class="beijing">
 				<div class="touxiang">
 					<img src="b.png" width="80em"  height="80em">
 				</div>
-				<div class="jieshao">
+				<!-- <div class="jieshao"> -->
 				<div class="wenben">
 				<p>  徐士林 55岁</p>
 				<p><img src="c.png" width="20em" height="20em">京城*四方*报纸林</p>
 				</div>
-				</div>
+				<!-- </div> -->
 				<div class="clear">
 				</div>
+			<div class="footer">
+				<div class="footer1">
+						留言
+				</div>
+				<div class="footer2">
+					电话联系
+				</div>
+				</div>
+				
 			</div>
+			</div>
+			<div class="neirong">
+			<div class="zuobian">
+					<img src="f.png" height="29em">
+				</div>
+				<div class="youbian">
+				专业技能
+				</div>
+			</div>
+			<div class="neirong">
+			<div class="neirong1">
+			<img src="h.png" height="20em">
+			</div>
+			<div class="neirong2">
+			住家
+			</div>
+			<div class="neirong1">
+			<img src="h.png" height="20em">
+			</div>
+			<div class="neirong2">
+			不含餐
+			</div>
+			
+			</div>
+			<div class="clear">
+			</div>
+			<div class="neirong">
+			<div class="neirong3">
+			从业年限  |
+			</div>
+			<div class="neirong2">
+			0~3年
+			</div>
+			</div>
+			<div class="neirong">
+			<div class="neirong3">
+			工作时间  |
+			</div>
+			<div class="neirong2">
+			全天
+			</div>
+			</div>
+			<div class="neirong">
+			<div class="neirong3">
+			服务价格  |
+			</div>
+			<div class="neirong4">
+			25元/小时
+			</div>
+			</div>
+			<div class="neirong5">
+			<div class="neirong6">
+			自我介绍 |
+			</div>
+			<div class="neirong7">
+			<p>可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人。</p>
+			</div>
+			</div>
+
 			<!-- <div class="caidan">
 			<div class="zuobian">
 			<img src="f.png" >
