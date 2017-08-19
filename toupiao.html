@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>投票</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <style type="text/css">
+
+    .box{width: 100%;
+    	height: 100%;
+    	overflow:hidden;
+    	}
+    	.daohang{
+    		width: 100%;
+    		position: absolute;
+    		top: 0;
+    		height: 3em;
+    		padding-top: 0.5em;
+    		display: flex;
+    		/*flex-direction: row;*/
+    		flex-wrap: nowrap;
+    		justify-content: space-between;
+    		align-items: center;
+    		background-color: #29bde0;
+    		text-align: center;
+    		position: fixed;
+    		top: 0;
+    		z-index: 1;
+
+    	}
+    	.daohang1{
+    		width: 3em;
+    		height: 3em;
+    		flex-grow: none;
+    		transform: scale(0.6,0.6);
+
+    	}
+    	.daohang2{
+    		height: 3em;
+    		line-height: 3em;
+    		width: 3em;
+    		flex-grow:1;
+    		color: #ffffff;
+    	}
+    	.tishi{
+    		background-color: #b9e9f5;
+    		width: 100%;
+    		height: 3.5em;
+    		line-height: 3.5em;
+    		display: flex;
+    		flex-direction: row;
+    		flex-wrap: nowrap;
+    		justify-content: space-between;
+    		align-items: center;
+
+
+    	}
+    	.tishi2{
+    		flex-grow: 1;
+    		height: 3em;
+    		line-height: 3em;
+    		padding-left: 3em;	
+    	}
+    	.tishi1{
+    		
+    		flex-grow: none;
+    		
+    		transform: scale(0.6,0.6);
+    	}
+    	.tishi3{
+    		position: absolute;
+    		left: 2em;
+    		width: 0;
+    		height: 0;
+    		border-left: 5px solid transparent;
+   	 		border-right: 5px solid transparent;
+    		border-top: 10px solid #b9e9f5;
+    	}
+    	.tishi4{
+    		width: 100%;
+    		height: 3em;
+    		line-height: 3em;
+    		padding-left: 3em;
+    		color: #ffffff;
+    	}
+    	.neirong{
+    		width: 100%;
+    		height: auto;
+    		display: flex;
+    		flex-direction: row;
+    		flex-wrap: wrap;
+    		justify-content: flex-start;
+    		align-items: stretch;
+    	}
+    	.neirong1{
+    		text-align: center;
+    		
+    		width: 5.56em;
+    		height: 5.6em;
+    		border:0.3em solid #ffffff;
+    		
+    		margin-left: 1em;
+    		margin-right: 1em;
+    		margin-bottom: 2em;
+
+
+
+
+    	}
+    	.neirong5{
+    		text-align: center;
+    		
+    		width: 5.56em;
+    		height: 5.6em;
+    		border:0.3em solid #ffffff;
+    		
+    		margin-left: 1em;
+    		margin-right: 1em;
+    		
+
+
+
+
+    	}
+    	.neirong2{
+    		width: 5em;
+    		height: 3.5em;
+    		line-height: 3.5em;
+    		background-color: #f5c97b;
+    		color: #565656;
+    	}
+    	.neirong3{
+    		color: #ffffff;
+    		width: 5em;
+    		height: 1.5em;
+    		line-height: 1.5em;
+    		background-color: #83b09a;
+    	}
+    	.neirong4{
+    		width: 2em;
+    		height: 2em;
+    		
+    		background-color: #ffffff;
+    		transform: scale(0.5,0.5);
+    		float: left;
+    		position: relative;
+    		left: -0.8em;
+    		top: 0.5em;
+
+    	}
+    	.neirong8{
+    		width: 2em;
+    		height: 2em;
+    		
+    		background-color: #ffffff;
+    		transform: scale(0.5,0.5);
+    		float: left;
+    		position: relative;
+    		left: -1.3em;
+    		top: 0.5em;
+
+    	}
+    	.neirong9{
+    		width: 2em;
+    		height: 2em;
+    		
+    		background-color: #ffffff;
+    		transform: scale(0.5,0.5);
+    		float: left;
+    		position: relative;
+    		left: 2em;
+    		bottom: 1.5em;
+
+    	}
+    	.neirong10{
+    		width: 2em;
+    		height: 2em;
+    		
+    		background-color: #ffffff;
+    		transform: scale(0.5,0.5);
+    		float: left;
+    		position: relative;
+    		left: 1.5em;
+    		bottom:1.5em;
+
+    	}
+    	
+    	.dibu{
+    		width: 100%;
+    		height: 4em;
+    		position: fixed;
+    		bottom: 0;
+    		display: flex;
+    		/*flex-direction: row;*/
+    		flex-wrap: nowrap;
+    		justify-content: center;
+    		align-items: center;
+    		background-color: #29bde0;
+    		z-index: 1;
+
+    	}
+    	.dibu1{
+    		width: 70%;
+    		height: 2.5em;
+    		line-height: 2.5em;
+    		background-color: #fbb435;
+    		text-align: center;
+    		color: #ffffff;
+
+    	}
+
+
+    .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 39px;
+    height: 40px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 36px;
+    height: 36px;
+    background-position: -54px -5px;
+}
+
+.sprite-c {
+    width: 57px;
+    height: 57px;
+    background-position: -100px -5px;
+}
+
+.sprite-d {
+    width: 29px;
+    height: 21px;
+    background-position: -167px -5px;
+}
+
+.sprite-e {
+    width: 20px;
+    height: 20px;
+    background-position: -202px -5px;
+}
+
+.sprite-f {
+    width: 29px;
+    height: 27px;
+    background-position: -236px -5px;
+}
+
+.sprite-g {
+    width: 25px;
+    height: 25px;
+    background-position: -270px -2px;
+}
+
+.sprite-h {
+    width: 43px;
+    height: 45px;
+    background-position: -301px -5px;
+}
+
+.sprite-i {
+    width: 51px;
+    height: 42px;
+    background-position: -354px -5px;
+}
+
+.sprite-j {
+    width: 36px;
+    height: 29px;
+    background-position: -415px -5px;
+}
+
+.sprite-k {
+    width: 24px;
+    height: 40px;
+    background-position: -461px -5px;
+}
+
+.sprite-l {
+    width: 28px;
+    height: 56px;
+    background-position: -495px -5px;
+}
+body{
+	padding-top: 3em;
+	padding-bottom: 4em;
+	background-color:#29bde0;
+
+}
+
+    </style>
+    </head>
+    <body>
+    <div class="box">
+    <div class="daohang">
+    <div class="daohang1">
+    <i class="sprite sprite-a"></i>
+    </div>
+    <div class="daohang2">
+    投票
+    </div>
+    
+    <div class="daohang1">
+    <i class="sprite sprite-b"></i>
+    </div>
+    </div>
+    <div class="tishi">
+    
+    <div class="tishi2">
+    发言讨论结束，大家请投票
+    </div>
+    <div class="tishi1">
+     <i class="sprite sprite-c"></i>
+    </div>
+    
+    </div>
+    <div class="tishi3">
+    </div>
+    <div class="tishi4">
+    点击得票数最多人的头像
+    </div>
+    <div class="neirong">
+    <div class="neirong6">
+    <div class="neirong5">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     1号
+    </div>
+    <div class="neirong7">
+    <div class="neirong4">
+    <i class="sprite sprite-d"></i>
+
+    </div>
+    <div class="neirong8">
+    <i class="sprite sprite-e"></i>
+
+    </div>
+    <div class="neirong9">
+    <i class="sprite sprite-f"></i>
+
+    </div>
+    <div class="neirong10">
+    <i class="sprite sprite-g"></i>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     2号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     警察
+    </div>
+    <div class="neirong3">
+     3号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     法官
+    </div>
+    <div class="neirong3">
+     4号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     狙击手
+    </div>
+    <div class="neirong3">
+     5号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     医生
+    </div>
+    <div class="neirong3">
+     6号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     杀手
+    </div>
+    <div class="neirong3">
+     7号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     8号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     9号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     法官
+    </div>
+    <div class="neirong3">
+     10号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     护士
+    </div>
+    <div class="neirong3">
+     11号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     记者
+    </div>
+    <div class="neirong3">
+     12号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     13号
+    </div>
+    </div>
+    <div class="neirong1">
+
+    <div class="neirong2">
+     水民
+    </div>
+    <div class="neirong3">
+     14号
+    </div>
+    </div>
+    <div class="dibu">
+    <div class="dibu1">
+    投死
+    </div>
+    </div>
+    
+    </div>
+    </body>
+    	
+     <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+            </body>
+            </html>
