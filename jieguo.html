@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>游戏结果</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <!-- 引入 Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+      .box{width: 100%;
+      	height: auto;
+      	}
+
+		.daohang{width: 100%;
+		height: 3em;
+		color: #ffffff;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+		align-items: center;
+		text-align: center;
+		background-color: #29bde0;
+		border-bottom: 2px solid  #74d4eb;
+		position: fixed;
+		top: 0;
+		z-index: 1;}
+		.daohang1{
+			width: 3em;
+			height: 3em;
+			flex-grow: none;
+			transform: scale(0.5,0.5);
+		}
+		.daohang2{
+			width: 5em;
+			height: 3em;
+			line-height: 3em;
+			flex-grow: 1;
+			color: #ffffff;
+		}
+		.neirong{
+			background-color: #29bde0;
+			width: 100%;
+			height: 23em;
+			display: flex;
+			flex-direction: column;
+			/*justify-content: space-around;*/
+			align-items: center;
+			padding-top: 1em;
+			/*text-align: center;*/
+		}
+		.neirong1{
+			width: 15em;
+			height: 9em;
+			background-image: url(a.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			
+
+		}
+		.neirong2{
+			width: 80%;
+			height: 5em;
+			color: #ffc865;
+			padding-top: 1em;
+			/*text-align: center;*/
+			
+
+		}
+		.neirong3{
+			width: 80%;
+			height: 2em;
+			line-height: 1.5em;
+			color: #ffffff;
+			}
+		.neirong4{
+			width:80%;
+			display: flex;
+			line-height: 1.5em;
+			justify-content: flex-start;
+			flex-wrap:wrap;
+			align-items: center;
+			
+		}
+		.neirong5{
+			width:5em;
+			height: 2em;
+			margin-right: 1em;
+			line-height: 1.5em;
+			color: #ffffff;
+
+		}
+		.jingguo{
+			width: 100%;
+			height: 8em;
+			border-bottom: 2px solid  #dddddd;
+			padding-bottom: 1em;
+
+		}
+		.jingguo1{
+			padding-left: 10%;
+			width: 30%;
+			float: left;
+			height:3em;
+			line-height: 3em;
+			color: #515151;
+		}
+		.jingguo2{
+			padding-top: 0.5em;
+			width: 30%;
+			float: right;
+			height: 3em;
+			line-height: 2em;
+			color: #d5d5d5;
+		}
+		.jingguo3{
+			width: 90%;
+			padding-left: 10%;
+			height: 4em;
+			float: left;
+			color: #a6a6a6;
+		}
+	.dibu{
+		width: 100%;
+		height: 4em;
+		background-color: #99dff0;
+		text-align: center;
+		display: flex;
+		z-index: 1;
+		
+		justify-content: space-around;
+		flex-wrap: nowrap;
+		align-items: center;
+		color: #ffffff;
+		position: fixed;
+		bottom: 0;
+
+	}
+	.dibu1{
+		width: 40%;
+		height: 3em;
+		border-radius: 2em;
+		background-color: #f66f6f;
+		line-height: 3em;
+	}
+	.dibu2{
+		width: 40%;
+		height: 3em;
+		line-height: 3em;
+		border-radius: 2em;
+		background-color: #fbb435;
+	}
+      .sprite {
+	
+	
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 39px;
+    height: 40px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 36px;
+    height: 36px;
+    background-position: -54px -5px;
+}
+
+.sprite-c {
+    width: 57px;
+    height: 57px;
+    background-position: -100px -5px;
+}
+
+.sprite-d {
+    width: 29px;
+    height: 21px;
+    background-position: -167px -5px;
+}
+
+.sprite-e {
+    width: 20px;
+    height: 20px;
+    background-position: -202px -5px;
+}
+
+.sprite-f {
+    width: 29px;
+    height: 27px;
+    background-position: -236px -5px;
+}
+
+.sprite-g {
+    width: 25px;
+    height: 25px;
+    background-position: -270px -2px;
+}
+
+.sprite-h {
+    width: 43px;
+    height: 45px;
+    background-position: -301px -5px;
+}
+
+.sprite-i {
+    width: 51px;
+    height: 42px;
+    background-position: -354px -5px;
+}
+
+.sprite-j {
+    width: 36px;
+    height: 29px;
+    background-position: -415px -5px;
+}
+
+.sprite-k {
+    width: 24px;
+    height: 40px;
+    background-position: -461px -5px;
+}
+
+.sprite-l {
+    width: 28px;
+    height: 56px;
+    background-position: -495px -5px;
+}
+	body{padding-bottom: 4em;
+		padding-top: 3em;}
+      </style>
+	
+   </head>
+   <body>
+   	<div class="box">
+   	<div class="daohang">
+
+   	<div class="daohang1">
+   	 <i class="sprite sprite-i"></i>
+   	</div>
+   	<div class="daohang2">
+   	游戏结果
+   	</div>
+   	<div class="daohang1">
+   	 <i class="sprite sprite-h"></i>
+   	</div>
+   	</div>
+   	<div class="neirong">
+   	<div class="neirong1">
+   	<!-- <img src="a.png" width="80em" height="60em"> -->
+   	</div>
+   	<div class="neirong2">
+   	本轮游戏共抓出凶手3人，共经历了5个白天，在杀人游戏中几百了67%的玩家！
+   	
+   	</div>
+   	<div class="neirong3">
+   	本次游戏攻击用时0小时25分钟
+   	</div>
+   	<div class="neirong4">
+   	<div class="neirong5">
+   	杀&nbsp;&nbsp;&nbsp;&nbsp;手0人
+   	</div>
+   	<div class="neirong5">
+   	警&nbsp;&nbsp;&nbsp;&nbsp;察1人
+   	</div>
+   	<div class="neirong5">
+   	平&nbsp;&nbsp;&nbsp;&nbsp;民6人
+   	</div>
+   	<div class="neirong5">
+   	狙击手0人
+   	</div>
+   	<div class="neirong5">
+   	医&nbsp;&nbsp;&nbsp;&nbsp;生1人
+   	</div>
+   	</div>
+   	<div class="neirong3">
+   	<p>卧底词汇：爱新觉罗</p>
+   
+   	</div>
+   	<div class="neirong3">
+   	<p>水民词汇：努尔哈赤</p>
+
+   	</div>
+   	</div>
+   	<div class="jingguo">
+   	<div class="jingguo1">
+   	第一天
+   	</div>
+   	<div class="jingguo2">
+   	0小时7分
+   	</div>
+   	<div class="jingguo3">
+   	<p>晚上：5号被杀手杀死，5号是水民</p>
+   	<p>白天：8号被全民投票投死，8号是杀手</p>
+   	</div>
+   	</div>
+   	<div class="jingguo">
+   	<div class="jingguo1">
+   	第二天
+   	</div>
+   	<div class="jingguo2">
+   	0小时7分
+   	</div>
+   	<div class="jingguo3">
+   	<p>晚上：4号被杀手杀死，4号是法官</p>
+   	<p>白天：2号被全民投票投死，2号是水民</p>
+   	</div>
+   	</div>
+   	<div class="jingguo">
+   	<div class="jingguo1">
+   	第三天
+   	</div>
+   	<div class="jingguo2">
+   	0小时7分
+   	</div>
+   	<div class="jingguo3">
+   	<p>晚上：5号被杀手杀死，5号是水民</p>
+   	<p>白天：8号被全民投票投死，8号是杀手</p>
+   	</div>
+   	</div>
+   	<div class="jingguo">
+   	<div class="jingguo1">
+   	第四天
+   	</div>
+   	<div class="jingguo2">
+   	0小时7分
+   	</div>
+   	<div class="jingguo3">
+   	<p>晚上：5号被杀手杀死，5号是水民</p>
+   	<p>白天：8号被全民投票投死，8号是杀手</p>
+   	</div>
+   	</div>
+   	<div class="jingguo">
+   	<div class="jingguo1">
+   	第五天
+   	</div>
+   	<div class="jingguo2">
+   	0小时7分
+   	</div>
+   	<div class="jingguo3">
+   	<p>晚上：5号被杀手杀死，5号是水民</p>
+   	<p>白天：8号被全民投票投死，8号是杀手</p>
+   	</div>
+   	</div>
+   	<div class="dibu">
+   	<div class="dibu1">
+   	再来一局
+   	</div>
+   	<div class="dibu2">
+   	上传并分享
+   	</div>
+   	</div>
+   </body>
+
+     
+ 
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
