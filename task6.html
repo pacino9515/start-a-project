@@ -116,6 +116,13 @@
 
 
         }
+        .xiala2{
+        	position: relative;
+        	left:70%;
+        	bottom: 1.7em;
+        	transform: scale(0.8,0.8);
+
+        }
         .neirong{
             width: 100%;
             height: 7em;
@@ -243,12 +250,64 @@
     height: 33px;
     background-position: -301px -5px;
 }
+ li,  
+        li a {  
+            text-decoration: none;  
+            list-style-type: none;  
+            font-family: "宋体";  
+             
+            
+        }  
+          
+        .btn1 { 
+        color: #b4b4b4;   
+            display: block;  
+            border:none;  
+            width:30%;  
+            height: 2em;  
+            text-align: center;  
+            line-height: 28px;  
+        }  
+          
+        ul {
+        background-color: #ffffff;  
+            margin-top: 1px;  
+            position: absolute; /*设置绝对定位，宽度为内容宽度*/  
+            left: -999em;   /*设置隐藏*/  
+            padding: 0;  /*离它的父元素的边界为0，所以可以位于父元素li的正下方*/  
+        }  
+          
+        ul li a {  
+            display: inline-block;  /*菜单项宽度未知，设置inline－block宽度为内容宽度*/  
+            border-top: 1px solid #ddd;  
+            border-left: 1px solid #ddd;  
+            border-right: 1px solid #ddd;  
+            height: 30px;  
+            padding: 0 10px;  
+            line-height: 30px;  
+        }  
+          
+        .last {  
+            border-bottom: 1px solid #ddd;  
+        }  
+          
+        .btn:hover ul {  
+            left: auto; /*默认ul的padding为0，位于按钮正下方*/  
+        }  
+          
+        ul li a:hover {  
+            background-color: #ddd;  
+        }  
+        .btn{  
+            display: inline-block; /*设置btn是inline－block，  
+            默认宽度为内容宽度，则鼠标只会在hover到按钮区域时才会展开下拉菜单*/  
+        } 
 
 /*.ceshi{background-image: url("sprit");
 width: 413px;height: 44px;}
 .ceshi1{
 	width: */
-}
+
     </style>
 
 </head>
@@ -265,81 +324,46 @@ width: 413px;height: 44px;}
 <i class="sprite sprite-a"></i></div>
 
     </div>
-    <div class="xiala">
-    <div class="xiala1">
-    
-     
-          <!--  <div class="col-*-4"> -->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    所在地<b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                 <li class="divider"></li>
-                    <li><a href="#">成都</a></li>
-                     <li class="divider"></li>
-                    <li><a href="#">北京</a></li>
-                     <li class="divider"></li>
-                    <li><a href="#">上海</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">广州</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">深圳</a></li>
-                </ul>
-            </li>
-          
-         
-           
-            </div>
-            <div class="xiala1">
-          
-           
-            <!-- <div class="col-*-4"> -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    食宿<b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                <li class="divider"></li>
-                    <li><a href="#">包吃包住</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">包吃不包住</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">包住不包吃</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">食宿自理</a></li>
-                    <!-- <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li> -->
-                </ul>
-            </li>
-          
-          
-            </div>
-         <!--    <div class="col-*-4"> -->
-         <div class="xiala1">
-       
-         
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    病人情况 <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="divider"></li>
-                    <li><a href="#">健康</a></li>
-                      <li class="divider"></li>
-                    <li><a href="#">能自理</a></li>
-                      <li class="divider"></li>
-                    <li><a href="#">严重</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">病危</a></li>
-                  <!--   <li class="divider"></li> -->
-                   <!--  <li><a href="#">另一个分离的链接</a></li> -->
-                </ul>
-            </li>
-           
-           
+   <div class="xiala">
+   <div class="xiala1">
+   <li class="btn"><a class="btn1" href="#">所在地</a>  
+        <ul>  
+            <li><a href="#">成都</a></li>  
+            <li><a href="#">北京</a></li>  
+            <li><a href="#">重庆</a></li>  
+            <li><a class="last" href="#">苏州</a></li>  
+        </ul>  
+    </li>
+    <div class="xiala2"> 
+    <i class="sprite sprite-h"></i>
     </div>
+   </div>
+   <div class="xiala1">
+   <li class="btn"><a class="btn1" href="#">食宿</a>  
+        <ul>  
+            <li><a href="#">包吃</a></li>  
+            <li><a href="#">自理</a></li>  
+            <li><a href="#">包饭</a></li>  
+              
+        </ul>  
+    </li>
+   <div class="xiala2"> 
+    <i class="sprite sprite-h"></i>
     </div>
+   </div>
+   <div class="xiala1">
+   <li class="btn"><a class="btn1" href="#">病人情况</a>  
+        <ul>  
+            <li><a href="#">严重</a></li>  
+            
+            <li><a class="last" href="#">卧床</a></li>  
+        </ul>  
+    </li>
+    <div class="xiala2"> 
+    <i class="sprite sprite-h"></i>
+    </div>
+   </div>
+   </div>
     <div class="neirong">
     <div class="neirong3">
    
@@ -546,7 +570,7 @@ width: 413px;height: 44px;}
 <!-- <div class="bg-a">
 
     </div> -->
-   
+  
     <div class="dibu">
     <div class="dibu1">
      <i class="sprite sprite-d"></i>
