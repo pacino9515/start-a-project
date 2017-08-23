@@ -130,7 +130,7 @@
 	.dibu{
 		width: 100%;
 		height: 4em;
-		background-color: #99dff0;
+	/*	background-color: #99dff0;*/
 		text-align: center;
 		display: flex;
 		z-index: 1;
@@ -141,6 +141,23 @@
 		color: #ffffff;
 		position: fixed;
 		bottom: 0;
+		z-index: 3;
+
+	}
+	.dibu3{
+		width: 100%;
+		height: 4em;
+		background-color: #99dff0;
+		
+		z-index: 1;
+		
+		
+		position: fixed;
+		bottom: 0;
+		z-index: 2;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.5;
+		opacity: 0.5;
 
 	}
 	.dibu1{
@@ -358,6 +375,9 @@
    	</div>
    	<div class="dibu2">
    	上传并分享
+   	</div>
+   	</div>
+   	<div class="dibu3">
    	</div>
    	</div>
    </body>
