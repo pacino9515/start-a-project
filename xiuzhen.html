@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT修仙院</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <!-- 引入 Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+.box{width: 100%;}
+         .telephone{
+            float: left;
+            color: #56bc8e;
+            margin-left: 10em;
+            height: 2em;
+            line-height: 2em;
+            flex-grow: 2;
+         }
+         .logo{
+            float: right;
+            width: 6em;
+            flex-grow: none;
+           
+            margin-right:10em; 
+           /* padding-right: 9em;*/
+         }
+         .logo1{
+            float: left;
+            width: 2em;
+            height: 2em;
+         }
+         .daohang{
+            width: 100%;
+            padding-right: 10em;
+            text-align: center;
+            height: 4em;
+            background-color: #29b078;
+            color: #ffffff;
+         }
+         .daohang1{width: 4em;
+            height: 4em;
+            line-height: 4em;
+            
+            float: right;
+
+
+         }
+         .daohang2{
+            width: 4em;
+            background-color:#ffffff;
+            height: 0.3em;
+            display: none;
+            z-index: 1;
+            position: relative;
+            bottom: 0.3em;
+            right: 0.4em;
+
+         }
+         .daohang1:hover .daohang2{display: block;}
+         .beijing{
+            width: 100%;
+           max-height: 30em;
+            overflow: hidden;
+           
+         }
+         .beijing1{
+            position: absolute;
+            top: 45%;
+            right:  3em;
+            z-index: 1;
+            transform: scale(0.6,0.6);
+         }
+         .beijing2{
+            position: absolute;
+           top: 45%;
+            left:3em;
+            z-index: 1;
+            transform: scale(0.6,0.6);
+         }
+         .neirong{
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+           
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+         }
+         .neirong1{
+            /*flex: 1;*/
+            width:10em;
+            height: 15em;
+            padding-top: 5em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+         }
+         .neirong2{
+            flex: 1;
+            height: 5em;
+            width: 4em;
+
+
+         }
+         .neirong5{
+            flex: 1;
+            height: 5em;
+            width: 5em;
+
+         }
+         .neirong6{
+            flex: 1;
+            height: 5em;
+            width: 3em;
+
+         }
+         .neirong3{
+            flex: 1;
+            height: 3em;
+            line-height: 3em;
+            text-align: center;
+            color: #333333;
+            padding: 1em;
+
+         }
+         .neirong4{
+            flex: 1;
+            height: 3em;
+            line-height: 1.5em;
+           
+            color: #999999;
+            padding-top: 1em;
+         }
+         .neirong7{
+            height: 1em;
+            width: 9em;
+            color: #26a26f;
+         }
+         .neirong8{
+            height: 3em;
+            width: 9em;
+            color: #999999;
+         }
+         .neirong9{
+            width: 2em;
+            height: 3em;
+            float: left;
+         }
+         .neirong10{
+            margin-top: 4em;
+            width: 100%;
+         }
+
+         .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 43px;
+    height: 62px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 60px;
+    height: 48px;
+    background-position: -58px -5px;
+}
+
+.sprite-c {
+    width: 52px;
+    height: 55px;
+    background-position: -128px -5px;
+}
+
+.sprite-d {
+    width: 74px;
+    height: 74px;
+    background-position: -190px -5px;
+}
+
+.sprite-e {
+    width: 20px;
+    height: 20px;
+    background-position: -274px -5px;
+}
+
+.sprite-f {
+    width: 108px;
+    height: 108px;
+    background-position: -304px -5px;
+}
+
+.sprite-g {
+    width: 108px;
+    height: 108px;
+    background-position: -5px -123px;
+}
+
+.sprite-h {
+    width: 108px;
+    height: 108px;
+    background-position: -123px -123px;
+}
+
+.sprite-i {
+    width: 108px;
+    height: 108px;
+    background-position: -241px -123px;
+}
+
+.sprite-j {
+    width: 212px;
+    height: 176px;
+    background-position: -5px -241px;
+}
+
+.sprite-k {
+    width: 175px;
+    height: 141px;
+    background-position: -227px -241px;
+}
+
+.sprite-m {
+    width: 175px;
+    height: 65px;
+    background-position: -227px -392px;
+}
+
+.sprite-n {
+    width: 175px;
+    height: 65px;
+    background-position: -422px -5px;
+}
+
+.sprite-o {
+    width: 263px;
+    height: 198px;
+    background-position: -422px -80px;
+}
+
+.sprite-p {
+    width: 92px;
+    height: 92px;
+    background-position: -412px -288px;
+}
+
+.sprite-q {
+    width: 139px;
+    height: 139px;
+    background-position: -514px -288px;
+}
+
+.sprite-qq {
+    width: 26px;
+    height: 25px;
+    background-position: -607px -5px;
+}
+
+.sprite-s {
+    width: 107px;
+    height: 34px;
+    background-position: -5px -437px;
+}
+
+.sprite-sina {
+    width: 26px;
+    height: 25px;
+    background-position: -643px -5px;
+}
+
+.sprite-t {
+    width: 10px;
+    height: 10px;
+    background-position: -679px -5px;
+}
+
+.sprite-tudou {
+    width: 126px;
+    height: 39px;
+    background-position: -412px -437px;
+}
+
+.sprite-u {
+    width: 27px;
+    height: 47px;
+    background-position: -663px -288px;
+}
+
+.sprite-u1 {
+    width: 27px;
+    height: 46px;
+    background-position: -663px -345px;
+}
+
+.sprite-user {
+    width: 13px;
+    height: 13px;
+    background-position: -699px -5px;
+}
+
+.sprite-v {
+    width: 10px;
+    height: 10px;
+    background-position: -679px -28px;
+}
+
+.sprite-wechat {
+    width: 25px;
+    height: 25px;
+    background-position: -412px -401px;
+}
+
+.sprite-xinxin {
+    width: 16px;
+    height: 15px;
+    background-position: -274px -48px;
+}
+
+.sprite-y {
+    width: 16px;
+    height: 16px;
+    background-position: -607px -48px;
+}
+          /*  li{ float:left; list-style: none;}
+*/
+      </style>
+   </head>
+   <body>
+    <div class="box">
+     <header style="height: 2em; width: 100%;display: flex; flex-wrap: nowrap; justify-content: center;align-items: center; ">
+
+        <div class="telephone">
+        客服热线：010-594-78634
+        </div>
+        <div class="logo">
+       <div class="logo1">
+        <li class="sprite sprite-wechat"></li>
+        </div><div class="logo1">
+        <li class="sprite sprite-sina"></li>
+       </div>
+       <div class="logo1">
+        <li class="sprite sprite-qq"></li>
+        </div>
+       
+        </div>
+      </header> 
+      <div class="daohang">
+      <div class="daohang1">
+      <button style="width: 4em;height: 4em;line-height: 4em;background-color: #29b078;color: #ffffff;border: none;">
+         首页
+      
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+       <div class="daohang1">
+       <button style="width: 4em;height: 4em;line-height: 4em;background-color: #29b078;color: #ffffff;border: none;">
+       职业<div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+      <div class="daohang1">
+      <button style="width: 4em;height: 4em;line-height: 4em;background-color: #29b078;color: #ffffff;border: none;">
+      推荐
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+      <div class="daohang1"><button style="width: 4em;height: 4em;line-height: 4em;background-color: #29b078;color: #ffffff;border: none;">
+      关于
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+
+ </div>
+ <div class="beijing">
+ <div class="beijing2">
+ <li class="sprite sprite-u1" ></li>
+ </div>
+ <div class="beijing1">
+ <li class="sprite sprite-u"></li>
+ </div>
+
+ <div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="c.jpg" alt="First slide">
+        </div>
+        <div class="item">
+            <img src="b.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="a.jpg" alt="Third slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel" 
+        data-slide="prev";
+    </a>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" 
+        data-slide="next";
+    </a>
+    </a>
+ </div>
+ </div>
+ <div class="neirong">
+ <div class="neirong1">
+ <div class="neirong5">
+ <li class="sprite sprite-b"></li>
+ </div>
+ <div class="neirong3">
+ 高效
+ </div>
+ <div class="neirong4">
+ 将五到七年的成长时间，压缩到一年到两年。
+ </div>
+ </div>
+ <div class="neirong1">
+ <div class="neirong2">
+ <li class="sprite sprite-c"></li>
+ </div>
+ <div class="neirong3">
+ 规范
+ </div>
+ <div class="neirong4">
+标准的实战教程，不会走弯路
+ </div>
+ </div>
+ <div class="neirong1">
+ <div class="neirong6">
+ <li class="sprite sprite-a"></li>
+ </div>
+ <div class="neirong3">
+ 人脉
+ </div>
+ <div class="neirong4">
+ 同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。
+ </div>
+ </div>
+ <div class="neirong1">
+ <div class="neirong7">
+ <div class="neirong9">
+ <li class="sprite sprite-user"></li></div>
+<div class="neirong9">
+ 12400</div>
+ </div>
+ <div class="neirong8">
+ 累计在线学习人数
+ </div>
+  <div class="neirong7">
+  <div class="neirong10">
+  </div>
+ <div class="neirong9">
+ <li class="sprite sprite-user"></li></div>
+ <div class="neirong9">
+ 12400</div>
+ </div>
+ <div class="neirong8">
+ 学员已找到满意工作
+ </div>
+
+ </div>
+ </div>
+ </div>
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
