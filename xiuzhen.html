@@ -23,10 +23,12 @@
             height: 2em;
             line-height: 2em;
             flex-grow: 2;
+            background-color: #fafafa;
          }
          .logo{
             float: right;
             width: 6em;
+            padding-top: 0.3em;
             flex-grow: none;
            
             margin-right:10em; 
@@ -36,6 +38,7 @@
             float: left;
             width: 2em;
             height: 2em;
+            transform: scale(0.8,0.8);
          }
          .daohang{
             width: 100%;
@@ -89,22 +92,44 @@
             width: 80%;
             margin-left: 10%;
             margin-right: 10%;
-           
+            height:25em;
+            overflow: hidden;
+            background-color: #fafafa;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            justify-content:center;
+            align-items: baseline;
             flex-wrap: nowrap;
             flex-direction: row;
+            margin-bottom: 4em;
          }
          .neirong1{
-            /*flex: 1;*/
+            flex: 1;
             width:10em;
+            margin-left: 2em;
+            margin-right:2em;
             height: 15em;
             padding-top: 5em;
             text-align: center;
             display: flex;
+           /* border: 1px solid #eeeded;*/
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+         }
+         .neirong13{
+            flex: 1;
+            width:10em;
+            margin-left: 2em;
+            margin-right:2em;
+            height: 25em;
+            padding-top: 3em;
+            text-align: center;
+            display: flex;
+            background-color: #ffffff;
+            border: 1px solid #eeeded;
+            flex-direction: column;
+            justify-content: space-around;
             align-items: center;
             flex-wrap: nowrap;
          }
@@ -112,6 +137,7 @@
             flex: 1;
             height: 5em;
             width: 4em;
+
 
 
          }
@@ -127,13 +153,31 @@
             width: 3em;
 
          }
+          .neirong11{
+            flex: 1;
+            height: 9em;
+            width: 9em;
+            transform: scale(0.6,0.6);
+
+         }
          .neirong3{
             flex: 1;
+            width: 10em;
             height: 3em;
             line-height: 3em;
             text-align: center;
             color: #333333;
             padding: 1em;
+
+         }
+         .neirong14{
+            flex: none;
+            width: 10em;
+            height: 3em;
+            line-height: 3em;
+            text-align: center;
+            color: #333333;
+            
 
          }
          .neirong4{
@@ -145,24 +189,163 @@
             padding-top: 1em;
          }
          .neirong7{
-            height: 1em;
+            height: 1.5em;
             width: 9em;
             color: #26a26f;
          }
          .neirong8{
-            height: 3em;
+            height: 2em;
+            line-height: 2em;
             width: 9em;
             color: #999999;
          }
          .neirong9{
             width: 2em;
-            height: 3em;
+            height: 2em;
             float: left;
          }
          .neirong10{
-            margin-top: 4em;
+            margin-top: 10em;
             width: 100%;
          }
+         .neirong12{
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            height:15em;
+            overflow: hidden;
+            background-color: #fafafa;
+            display: flex;
+            justify-content:center;
+            align-items: baseline;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            margin-bottom: 4em;
+         }
+         .xuexi{
+            background-color: #fafafa;
+             width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 4em;
+            color: #999999;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;         }
+         .xuexi1{
+           /* flex: 1;*/
+           float: left;
+            width:22%;
+            margin-right:1%; 
+            height: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row; 
+         }
+         .xuexi2{
+            flex: 1;
+            width: 5em;
+            height:5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            transform: scale(0.8,0.8);
+
+         }
+         .xuexi3{
+            width: 6em;
+            height: 5em;
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+           /* line-height: 3em;*/
+         }
+         .xuexi4{
+            position: relative;
+            left: -2em;
+            z-index: 3;
+            color: #29b078;
+            font-size: 1.3em;
+         }
+          .xuexi5{
+            background-color: #fafafa;
+             width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 0;
+            color: #999999;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;         }
+         .dibu1{
+            float: left;
+            width: 15em;
+            height: 13em;
+            flex: 1;
+         }
+          .dibu2{
+            float: right;
+            width: 10em;
+            height: 10em;
+            margin-left: 15em;
+            color: #ffffff;
+            flex: none;
+
+         }
+         .dibu3{width: 100%;
+            color: #ffffff;
+            height: 6em;
+            line-height: 6em;}
+         .dibu4{
+            width: 45%;
+            float: left;
+            height: 3em;
+            line-height: 3em;
+         }
+         .dibu5{
+            width: 6em;
+            height: 0.15em;
+            background-color: #ffffff;
+            position:relative;
+            top: 2.2em;
+            z-index: 4;
+         }
+         .yuandian{
+            width: 100%;
+            height: 2em;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row; 
+
+
+         }
+         .yuandian1{
+         height: 1em;
+         width: 1em;
+         border-radius: 50%;
+         background-color: #29b078;
+
+
+      }
+      .yuandian2{
+         height: 1em;
+         width: 1em;
+         border-radius: 50%;
+         background-color: #ffffff;
+         margin-left:0.7em;
+         border: 2px solid #ecebeb;
+      }
 
          .sprite {
     background-image: url(spritesheet.png);
@@ -225,123 +408,131 @@
 }
 
 .sprite-j {
-    width: 212px;
-    height: 176px;
+    width: 181px;
+    height: 85px;
     background-position: -5px -241px;
 }
 
 .sprite-k {
-    width: 175px;
-    height: 141px;
-    background-position: -227px -241px;
+    width: 181px;
+    height: 85px;
+    background-position: -196px -241px;
 }
 
 .sprite-m {
-    width: 175px;
-    height: 65px;
-    background-position: -227px -392px;
+    width: 181px;
+    height: 85px;
+    background-position: -5px -336px;
 }
 
 .sprite-n {
-    width: 175px;
-    height: 65px;
-    background-position: -422px -5px;
+    width: 181px;
+    height: 85px;
+    background-position: -196px -336px;
 }
 
 .sprite-o {
-    width: 263px;
-    height: 198px;
-    background-position: -422px -80px;
+    width: 181px;
+    height: 85px;
+    background-position: -422px -5px;
 }
 
 .sprite-p {
     width: 92px;
     height: 92px;
-    background-position: -412px -288px;
+    background-position: -422px -100px;
 }
 
 .sprite-q {
     width: 139px;
     height: 139px;
-    background-position: -514px -288px;
+    background-position: -387px -202px;
 }
 
 .sprite-qq {
     width: 26px;
     height: 25px;
-    background-position: -607px -5px;
+    background-position: -613px -5px;
 }
 
 .sprite-s {
     width: 107px;
     height: 34px;
-    background-position: -5px -437px;
+    background-position: -524px -100px;
 }
 
 .sprite-sina {
     width: 26px;
     height: 25px;
-    background-position: -643px -5px;
+    background-position: -613px -40px;
 }
 
 .sprite-t {
     width: 10px;
     height: 10px;
-    background-position: -679px -5px;
+    background-position: -274px -40px;
 }
 
 .sprite-tudou {
     width: 126px;
     height: 39px;
-    background-position: -412px -437px;
+    background-position: -524px -144px;
 }
 
 .sprite-u {
     width: 27px;
     height: 47px;
-    background-position: -663px -288px;
+    background-position: -359px -144px;
 }
 
 .sprite-u1 {
     width: 27px;
     height: 46px;
-    background-position: -663px -345px;
+    background-position: -536px -193px;
 }
 
 .sprite-user {
     width: 13px;
     height: 13px;
-    background-position: -699px -5px;
+    background-position: -58px -75px;
 }
 
 .sprite-v {
     width: 10px;
     height: 10px;
-    background-position: -679px -28px;
+    background-position: -81px -75px;
 }
 
 .sprite-wechat {
     width: 25px;
     height: 25px;
-    background-position: -412px -401px;
+    background-position: -101px -75px;
 }
 
 .sprite-xinxin {
     width: 16px;
     height: 15px;
-    background-position: -274px -48px;
+    background-position: -136px -75px;
 }
 
 .sprite-y {
     width: 16px;
     height: 16px;
-    background-position: -607px -48px;
+    background-position: -162px -75px;
 }
+      a:link,
+      a:visited     
+      {
+      color:#ffffff;
+      text-decoration:none;
+      }
+
+p{text-align: left; padding-left: 1em;padding-right: 1em;}
           /*  li{ float:left; list-style: none;}
 */
       </style>
    </head>
-   <body>
+   <body style="background-color: #fafafa;">
     <div class="box">
      <header style="height: 2em; width: 100%;display: flex; flex-wrap: nowrap; justify-content: center;align-items: center; ">
 
@@ -441,7 +632,7 @@
  高效
  </div>
  <div class="neirong4">
- 将五到七年的成长时间，压缩到一年到两年。
+ <p>将五到七年的成长时间，压缩到一年到两年。</p>
  </div>
  </div>
  <div class="neirong1">
@@ -452,7 +643,7 @@
  规范
  </div>
  <div class="neirong4">
-标准的实战教程，不会走弯路
+<p>标准的实战教程，不会走弯路</p>
  </div>
  </div>
  <div class="neirong1">
@@ -463,10 +654,12 @@
  人脉
  </div>
  <div class="neirong4">
- 同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。
+ <p>同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</p>
  </div>
  </div>
  <div class="neirong1">
+ <div class="neirong10">
+ </div>
  <div class="neirong7">
  <div class="neirong9">
  <li class="sprite sprite-user"></li></div>
@@ -477,8 +670,7 @@
  累计在线学习人数
  </div>
   <div class="neirong7">
-  <div class="neirong10">
-  </div>
+  
  <div class="neirong9">
  <li class="sprite sprite-user"></li></div>
  <div class="neirong9">
@@ -490,7 +682,328 @@
 
  </div>
  </div>
+ <h4 style="text-align: center;"> <b>如何学习</b></h4>
+ <div class="xuexi">
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
  </div>
+ <div class="xuexi4">1
+ </div>
+ <div class="xuexi3">
+ 匹配你现在的个人情况寻找适合自己的岗位
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">2
+ </div>
+ <div class="xuexi3">
+ 了解职业前景薪金待遇、竞争压力等
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">3
+ </div>
+ <div class="xuexi3">
+ 掌握行业内顶级技能
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">4
+ </div>
+ <div class="xuexi3">
+ 查看职业目标任务
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ </div>
+  <div class="xuexi">
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">5
+ </div>
+ <div class="xuexi3">
+ 参考学习资源，掌握技能点。逐个完成任务
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">6
+ </div>
+ <div class="xuexi3">
+ 加入班级，和小伙伴们互帮互助，一块学习
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">7
+ </div>
+ <div class="xuexi3">
+ 选择导师，一路引导，加速自己成长
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ <div class="xuexi1">
+ <div class="xuexi2">
+ <li class="sprite sprite-d"></li>
+ </div>
+ <div class="xuexi4">8
+ </div>
+ <div class="xuexi3">
+ 完成职业技能，升级业界大牛
+ </div>
+ <div class="xuexi2">
+ <li class="sprite sprite-e"></li>
+ </div>
+ </div>
+ </div>
+  <h4 style="text-align: center;margin-top: 4em;margin-bottom: 4em;"><b>优秀学员展示</b></h4>
+ <div class="neirong">
+ <div class="neirong13">
+ <div class="neirong11">
+ <li class="sprite sprite-f"></li>
+ </div>
+ <div class="neirong14">
+ 技术顾问：罗大佑
+ </div>
+ <div class="neirong4">
+ <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设.</p>
+ </div>
+ </div>
+ <div class="neirong13">
+ <div class="neirong11">
+ <li class="sprite sprite-g"></li>
+ </div>
+ <div class="neirong14">
+ 技术顾问：罗小佑
+ </div>
+ <div class="neirong4">
+<p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设.</p>
+ </div>
+ </div>
+ <div class="neirong13">
+ <div class="neirong11">
+ <li class="sprite sprite-h"></li>
+ </div>
+ <div class="neirong14">
+ 技术顾问：周杰伦
+ </div>
+ <div class="neirong4">
+ <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设.</p>
+ </div>
+ </div>
+  <div class="neirong13">
+ <div class="neirong11">
+ <li class="sprite sprite-i"></li>
+ </div>
+ <div class="neirong14">
+ 技术顾问：罗大佑
+ </div>
+ <div class="neirong4">
+ <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设.</p>
+ </div>
+ </div>
+ 
+ </div>
+ <div class="yuandian">
+ <div class="yuandian1">
+ </div>
+ <div class="yuandian2">
+ </div>
+ <div class="yuandian2">
+ </div>
+ <div class="yuandian2">
+ </div>
+ </div>
+  <h4 style="text-align: center;margin-top: 4em;"><b>战略合作企业</b></h4>
+  <div class="neirong12">
+  <div class="neirong1">
+  <li class="sprite sprite-j"></li>
+  </div>
+  <div class="neirong1">
+  <li class="sprite sprite-k"></li>
+  </div>
+  <div class="neirong1">
+  <li class="sprite sprite-m"></li>
+  </div>
+  <div class="neirong1">
+  <li class="sprite sprite-n"></li>
+  </div>
+  <div class="neirong1">
+  <li class="sprite sprite-o"></li>
+  </div>
+  </div>
+    <h4 style="text-align: center"><b>友情链接</b></h4>
+    <div class="xuexi5">
+ <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+ <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+ 
+ 
+ </div>
+  <div class="xuexi5">
+ <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+ <div class="xuexi1">
+ 
+ <li>手机软件</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>找工作</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+  <div class="xuexi1">
+ 
+ <li>教师招聘</li>
+ </div>
+ 
+ 
+ </div>
+<footer style="background-color: #26a26f; width: 100%;
+padding-left:10%;padding-right:10%;height: 15em;display: flex;
+justify-content: space-between; align-items: center;flex-wrap: nowrap;          flex-direction: row; ">
+   <div class="dibu1">
+   <div class="dibu3">
+   技术树——改变你我
+   </div>
+   <div class="dibu3">
+   关于我们|练习我们|合作企业
+   </div>
+   </div>
+   <div class="dibu1">
+   <div class="dibu3">
+   旗下网站
+
+   </div>
+   <div class="dibu3">
+   <div class="dibu4">
+   草船云孵化器
+   </div>
+   <div class="dibu5">
+   </div>
+   <div class="dibu4">
+   最强IT特训营
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task3/mojing/mojing3.html"><span>葡萄藤轻游戏</span></a>
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task7/zuoyou.html"><span>桌游精灵</span></a>
+   </div>
+   </div>
+   </div>
+    <div class="dibu2">
+    微信公众平台
+    <li class="sprite sprite-p"></li>
+   </div>
+   
+
+</footer>
+<footer style="width: 100%;height: 2em;
+background-color: #26a26f;text-align: center;border-top: 2px solid #32c086;color: #ffffff;">
+  Copyright© 2015技术树 www.jnshu.com All Rights Reserved|京ICP备12005880号
+</footer>
+ </div>
+
       <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
       <script src="https://code.jquery.com/jquery.js"></script>
       <!-- 包括所有已编译的插件 -->
