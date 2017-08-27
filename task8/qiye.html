@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT修仙院</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <!-- 引入 Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+		.box{width: 100%;}
+         .telephone{
+            float: left;
+            color: #56bc8e;
+            margin-left: 10em;
+            height: 2em;
+            line-height: 2em;
+            flex-grow: 2;
+            background-color: #fafafa;
+         }
+         .logo{
+            float: right;
+            width: 6em;
+            padding-top: 0.3em;
+            flex-grow: none;
+           
+            margin-right:10em; 
+           /* padding-right: 9em;*/
+         }
+         .logo1{
+            float: left;
+            width: 2em;
+            height: 2em;
+            transform: scale(0.8,0.8);
+         }
+         .daohang{
+            width: 100%;
+            padding-right: 10em;
+            text-align: center;
+            height: 6em;
+            background-color: #29b078;
+            color: #ffffff;
+
+         }
+         .daohang1{width: 4em;
+            height: 6em;
+            line-height: 6em;
+            
+            float: right;
+
+
+         }
+         .daohang2{
+            width: 4em;
+            background-color:#ffffff;
+            height: 0.3em;
+            display: none;
+            z-index: 1;
+            position: relative;
+            bottom: 0.3em;
+            right: 0.4em;
+
+         }
+         .daohang3{
+         	width: 6em;
+         	height: 6em;
+         	float: left;
+         	padding-left: 15em;
+         	z-index: 1;
+         	 display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+         }
+         .daohang1:hover .daohang2{display: block;}
+         
+         .beijing3{
+         	width: 100%;
+         	max-height: 15em;
+         	/*transform: scale(0.6,0.6);*/
+         }
+         .qiye{width: 100%;
+         	height: auto;
+         	padding-right: 10%;
+         	padding-left: 10%;
+         	background-color: #fafafa;
+         	 display: flex;
+            justify-content:center;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            flex-direction: row;
+         }
+         	.qiye1{width: 100%;
+         		padding-left: 10%;
+         		height: 6em;
+         		line-height: 6em;
+         		margin-bottom: 
+         		background-color: #fafafa;
+         		}
+         	.qiye2{
+         		margin-top: 1em;
+         		background-color: #ffffff;
+         		width: 15em;
+         		height: auto;
+         		border: 1px solid #e6e6e6;
+         		margin-right: 5em;
+         		flex-grow: none;
+         	}
+         	.qiye3{
+         		width: 30em;
+         		height: auto;
+         		flex-grow: 1;
+         		margin-top: 1em;
+         		border: 1px solid #e6e6e6;
+         		background-color: #ffffff;
+         	}
+         	.qiye4{width: 100%;
+         		height: 4em;
+         		line-height: 4em;
+         		text-align: center;
+         		border-bottom:1px solid #e6e6e6;
+         	}
+         	.qiye5{width: 100%;
+         		height: 4em;
+         		display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+	
+
+         	}
+         	.qiye6{width: 1em;
+         		height: 1em;}
+         	.qiye7{width: 5em;
+         		height: 2em;
+         		color: #29b078;}
+         	.qiye8{width: 5em;
+         		height: 2em;
+         		color: #ff650e;}
+
+         	.qiye9{width: 100%;
+         		height: auto;
+         		display: flex;
+
+	            justify-content:center;
+	            align-items:center;
+	            flex-wrap: nowrap;
+	            flex-direction: row;
+	            border-bottom:1px solid #e6e6e6;
+		}
+		.qiye12{padding: 1em 3em 1em 3em;
+				width: 100%;
+         		height: auto;
+         		display: flex;
+         		line-height: 2em;
+         		color: #a7a7a7;
+
+	            justify-content:center;
+	            align-items:center;
+	            flex-wrap: nowrap;
+	            flex-direction: row;
+	            text-indent: 30px;
+	           /* border-bottom:1px solid #e6e6e6;*/
+		}
+         	.qiye10{
+         		width: 13em;
+         		height: 8em;
+         		flex-grow: none;
+         		display: flex;
+				padding-left: 4em;	
+	            justify-content:center;
+	            align-items:center;
+	            flex-wrap: nowrap;
+	            flex-direction: row;
+         	}
+         	.qiye11{
+         		flex-grow: 1;
+         		width: 14em;
+         		height: 8em;
+         		padding-left: 2em;
+         		padding-right: 4em;
+         		display: flex;
+				text-indent: 35px;
+	            justify-content:center;
+	            align-items:center;
+	            flex-wrap: nowrap;
+	            flex-direction: row;
+	            color: #a7a7a7;
+         	}
+         .dibu1{
+            float: left;
+            width: 15em;
+            height: 13em;
+            flex: 1;
+         }
+          .dibu2{
+            float: right;
+            width: 10em;
+            height: 10em;
+            margin-left: 15em;
+            color: #ffffff;
+            flex: none;
+
+         }
+         .dibu3{width: 100%;
+            color: #ffffff;
+            height: 6em;
+            line-height: 6em;}
+         .dibu4{
+            width: 45%;
+            float: left;
+            height: 3em;
+            line-height: 3em;
+         }
+         .dibu5{
+            width: 6em;
+            height: 0.15em;
+            background-color: #ffffff;
+            position:relative;
+            top: 2.2em;
+            z-index: 4;
+         }
+         
+
+         .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 43px;
+    height: 62px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 60px;
+    height: 48px;
+    background-position: -58px -5px;
+}
+
+.sprite-c {
+    width: 52px;
+    height: 55px;
+    background-position: -128px -5px;
+}
+
+.sprite-d {
+    width: 74px;
+    height: 74px;
+    background-position: -190px -5px;
+}
+
+.sprite-e {
+    width: 20px;
+    height: 20px;
+    background-position: -274px -5px;
+}
+
+.sprite-f {
+    width: 108px;
+    height: 108px;
+    background-position: -304px -5px;
+}
+
+.sprite-g {
+    width: 108px;
+    height: 108px;
+    background-position: -5px -123px;
+}
+
+.sprite-h {
+    width: 108px;
+    height: 108px;
+    background-position: -123px -123px;
+}
+
+.sprite-i {
+    width: 108px;
+    height: 108px;
+    background-position: -241px -123px;
+}
+
+.sprite-j {
+    width: 181px;
+    height: 85px;
+    background-position: -5px -241px;
+}
+
+.sprite-k {
+    width: 181px;
+    height: 85px;
+    background-position: -196px -241px;
+}
+
+.sprite-m {
+    width: 181px;
+    height: 85px;
+    background-position: -5px -336px;
+}
+
+.sprite-n {
+    width: 181px;
+    height: 85px;
+    background-position: -196px -336px;
+}
+
+.sprite-o {
+    width: 181px;
+    height: 85px;
+    background-position: -422px -5px;
+}
+
+.sprite-p {
+    width: 92px;
+    height: 92px;
+    background-position: -422px -100px;
+}
+
+.sprite-q {
+    width: 139px;
+    height: 139px;
+    background-position: -387px -202px;
+}
+
+.sprite-qq {
+    width: 26px;
+    height: 25px;
+    background-position: -613px -5px;
+}
+
+.sprite-s {
+    width: 107px;
+    height: 34px;
+    background-position: -524px -100px;
+}
+
+.sprite-sina {
+    width: 26px;
+    height: 25px;
+    background-position: -613px -40px;
+}
+
+.sprite-t {
+    width: 10px;
+    height: 10px;
+    background-position: -274px -40px;
+}
+
+.sprite-tudou {
+    width: 126px;
+    height: 39px;
+    background-position: -524px -144px;
+}
+
+.sprite-u {
+    width: 27px;
+    height: 47px;
+    background-position: -359px -144px;
+}
+
+.sprite-u1 {
+    width: 27px;
+    height: 46px;
+    background-position: -536px -193px;
+}
+
+.sprite-user {
+    width: 13px;
+    height: 13px;
+    background-position: -58px -75px;
+}
+
+.sprite-v {
+    width: 10px;
+    height: 10px;
+    background-position: -81px -75px;
+}
+
+.sprite-wechat {
+    width: 25px;
+    height: 25px;
+    background-position: -101px -75px;
+}
+
+.sprite-xinxin {
+    width: 16px;
+    height: 15px;
+    background-position: -136px -75px;
+}
+
+.sprite-y {
+    width: 16px;
+    height: 16px;
+    background-position: -162px -75px;
+}
+      a:link,
+      a:visited     
+      {
+      color:#ffffff;
+      text-decoration:none;
+      }
+
+p{text-align: left; padding-left: 1em;padding-right: 1em;}
+          /*  li{ float:left; list-style: none;}
+*/
+
+      </style>
+   </head>
+   <body style="background-color: #fafafa;">
+    <div class="box">
+     <header style="height: 2em; width: 100%;display: flex; flex-wrap: nowrap; justify-content: center;align-items: center; ">
+
+        <div class="telephone">
+        客服热线：010-594-78634
+        </div>
+        <div class="logo">
+       <div class="logo1">
+        <li class="sprite sprite-wechat"></li>
+        </div><div class="logo1">
+        <li class="sprite sprite-sina"></li>
+       </div>
+       <div class="logo1">
+        <li class="sprite sprite-qq"></li>
+        </div>
+       
+        </div>
+      </header> 
+      <div class="daohang">
+      <div class="daohang3">
+      <img src="e.png" width="109em" height="47em">
+      </div>
+      <div class="daohang1">
+      <a href="http://119.10.57.69:880/jnshu3958/task8/xiuzhen.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+         首页</button>
+      
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+       <div class="daohang1">
+        <a href="http://119.10.57.69:880/jnshu3958/task8/zhiwei.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+       职业<div class="daohang2">
+      </div>
+      </button></a>
+      </div>
+
+      <div class="daohang1">
+      <a href="http://119.10.57.69:880/jnshu3958/task8/qiye.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+      推荐
+      <div class="daohang2">
+      </div>
+      </button></a>
+      </div>
+		
+      <div class="daohang1"><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+      关于
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+
+ </div>
+ <div class="beijing3">
+ <img src="d.jpg" width="100%" height="140em">
+ 
+</div>
+<div class="qiye1">
+<a href="http://119.10.57.69:880/jnshu3958/task8/xiuzhen.html" style="color: #333333;">首页></a><a style="color: #29b078">合作企业</a>
+
+</div>
+<div class="qiye">
+
+<div class="qiye2">
+<div class="qiye4">
+<b>合作企业</b>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 阿里巴巴</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 腾讯视频</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-v"></li></div>
+ <div class="qiye8"> 土豆网</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 优酷网</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 哔哩哔哩</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 熊猫TV</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> QQ空间</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 新浪微博</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 网易新闻</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7">今日头条</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7">知乎</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 爱奇艺</div>
+</div>
+<div class="qiye5">
+<div class="qiye6">
+ <li class="sprite sprite-t"></li></div>
+ <div class="qiye7"> 小米科技</div>
+</div>
+</div>
+<div class="qiye3">
+<div class="qiye9">
+<div class="qiye10">
+<li class="sprite sprite-tudou"></li>
+</div>
+<div class="qiye11">
+土豆是阿里巴巴文化娱乐集团旗下短视频平台，以“只要时刻有趣着”为口号，号召全球有趣短视频。由阿里巴巴文化娱乐集团移动事业群总裁何小鹏兼任总裁，以成为“全球第一短视频平台”为目标，全力进击PUGC领域
+
+</div>
+</div>
+<div class="qiye12">
+<p>2014年3月，土豆 “韩娱频道”启动上线发布会举办。土豆韩娱频道将以“最全、最原创、最具互动”的定位策略，打造最具特色并紧跟韩娱潮流的全方位内容互动平台，此举标志着土豆全面开启韩国娱乐文化策略。今后，土豆将以全方位的影视、音乐、娱乐、时尚、综艺等韩国授权节目，汇聚自制节目、PGC、UGC等原创内容，融入最具互动的粉丝体验，将土豆韩娱频道打造成韩国潮流文化与国内粉丝的聚集地，为粉丝提供一站式的韩文化服务。</p>
+</div>
+<div class="qiye12">
+<p>2013年6月，国内第一个"文艺电影频道”在土豆上线，并与豆瓣网合作提供“线上观影、在线互动、快捷购票、线下活动”的跨平台、一站式服务。文艺电影频道储备百部高质量院线文艺片，涵盖奥斯卡、戛纳影节等世界级获奖佳片，不乏欧洲文艺大师迈克尔哈内克、韩国名导李沧东，金基德大师等 文艺大家的经典力作，更成为《观音山》、《桃姐》、《晚秋》等大量华语文艺电影的在线展示厅。除此之外，还收录了百部文艺地下电影及大学生优秀文艺电影作品。2014年3月，在第86届奥斯卡颁奖典礼举办前日，土豆宣布独家获得了六项大奖提名的《达拉斯买家俱乐部》网络版权，并在北京举办国内首次观影活动。该片也是第一部在国内非院线上映的86届奥斯卡提名影片。</p></div>
+<div class="qiye12">
+<p>2015年10月16日，阿里巴巴集团宣布已经向优酷土豆董事会发出要约，收购优酷土豆剩余全部流通股，按照每ADS（美国存托凭证）26.60美元计算，预计总金额很可能超过45亿美元。同时，阿里巴巴提议，由优酷创始人古永锵继续担任优酷土豆主席及CEO。这一要约收购已经得到了包括古永锵，成为基金及其关联方在内优酷创始股东们的支持。</p></div>
+<div class="qiye12">
+<p>2013年10月，由土豆与深圳卫视共同策划、出资制作并由双方团队联合执行的“青春的选择2013年度盛典”在京举办。盛典以“青春ORZ”作为主题，是国内唯一一个属于年轻人的颁奖盛典。盛典当天颁发近30个荣誉称号，涵盖音乐影视、动漫作品、潮流品牌、电子产品及游戏、热门APP等潮流生活的各个方面，均由年轻人自主投票选出，定义了当下年轻人最爱的娱乐及时尚潮流。土豆与深圳卫视从节目的研发、架构、机制、活动搭载、执行、宣传等多个维度全部打通，进入到台网互动的全新阶段——网台联动3.0模式。盛典于11月30日深圳卫视综艺节目黄金档正式上线，土豆、深圳卫视同步献映。</p>
+</div>
+<div class="qiye12">
+<p>同时，土豆移动端APP本着“个性、有趣”的产品理念不仅为年轻人提供了更好看的内容，也为年轻人提供了惊喜不断的视频玩法。在2013年陆续推出多代典型版本：9月份推出的APP3.4版本，强化“碰撞穿越”功能外，全新升级多版本的滤镜功能，文艺范儿十足；11月推出的APP3.5版本，则侧重UGC内容的“消费”和体验，被誉为“移动时代的UGC样本”。</p>
+</div>
+<div class="qiye12">
+<p>根据第三方调研公司艾瑞的数据，优酷土豆集团在PC端和移动端全平台各项数据持续占据视频行业绝对的领先优势，截止2014年3月，土豆每月独立访问用户数量从增长到2.43亿。受益于移动端的优异表现和对青年文化品牌市场的深耕， 2013年土豆在移动端的增长也非常迅猛，2013年三季度，土豆移动端获得了高速增长，月均覆盖用户较当年3月增长11倍，平均增长率超过40%；月均视频播放量增长23倍，月平均增幅达60%。</p></div>
+</div>
+</div>
+</div>
+
+<footer style="background-color: #26a26f; width: 100%;
+padding-left:10%;padding-right:10%;height: 15em;display: flex;
+justify-content: space-between; align-items: center;flex-wrap: nowrap;          flex-direction: row; margin-top: 10em;">
+   <div class="dibu1">
+   <div class="dibu3">
+   技术树——改变你我
+   </div>
+   <div class="dibu3">
+   关于我们|练习我们|合作企业
+   </div>
+   </div>
+   <div class="dibu1">
+   <div class="dibu3">
+   旗下网站
+
+   </div>
+   <div class="dibu3">
+   <div class="dibu4">
+   草船云孵化器
+   </div>
+   <div class="dibu5">
+   </div>
+   <div class="dibu4">
+   最强IT特训营
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task3/mojing/mojing3.html"><span>葡萄藤轻游戏</span></a>
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task7/zuoyou.html"><span>桌游精灵</span></a>
+   </div>
+   </div>
+   </div>
+    <div class="dibu2">
+    微信公众平台
+    <li class="sprite sprite-p"></li>
+   </div>
+   
+
+</footer>
+<footer style="width: 100%;height: 2em;
+background-color: #26a26f;text-align: center;border-top: 2px solid #32c086;color: #ffffff;">
+  Copyright© 2015技术树 www.jnshu.com All Rights Reserved|京ICP备12005880号
+</footer>
+ </div>
+
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

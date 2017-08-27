@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT修仙院</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <!-- 引入 Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+		.box{width: 100%;}
+         .telephone{
+            float: left;
+            color: #56bc8e;
+            margin-left: 10em;
+            height: 2em;
+            line-height: 2em;
+            flex-grow: 2;
+            background-color: #fafafa;
+         }
+         .logo{
+            float: right;
+            width: 6em;
+            padding-top: 0.3em;
+            flex-grow: none;
+           
+            margin-right:10em; 
+           /* padding-right: 9em;*/
+         }
+         .logo1{
+            float: left;
+            width: 2em;
+            height: 2em;
+            transform: scale(0.8,0.8);
+         }
+         .daohang{
+            width: 100%;
+            padding-right: 10em;
+            text-align: center;
+            height: 6em;
+            background-color: #29b078;
+            color: #ffffff;
+
+         }
+         .daohang1{width: 4em;
+            height: 6em;
+            line-height: 6em;
+            
+            float: right;
+
+
+         }
+         .daohang2{
+            width: 4em;
+            background-color:#ffffff;
+            height: 0.3em;
+            display: none;
+            z-index: 1;
+            position: relative;
+            bottom: 0.3em;
+            right: 0.4em;
+
+         }
+         .daohang3{
+         	width: 6em;
+         	height: 6em;
+         	float: left;
+         	padding-left: 15em;
+         	z-index: 1;
+         	 display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+         }
+         .daohang1:hover .daohang2{display: block;}
+         
+         .beijing3{
+         	width: 100%;
+         	max-height: 15em;
+         	/*transform: scale(0.6,0.6);*/
+         }
+       
+         	.qiye1{width: 100%;
+         		padding-left: 10%;
+         		height: 6em;
+         		line-height: 6em;
+         		margin-bottom: 
+         		background-color: #fafafa;
+         		}
+         .zhiye{
+          width: 100%;
+          padding-left: 10%;
+          padding-right: 10%;
+         }
+         .zhiye1{
+          width: 100%;
+          height:auto;
+          line-height: 4em;
+          display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+             border-top: 1px solid #d0d6d9;
+             border-bottom:1px solid #edf1f2;
+
+         }
+         .zhiye2{
+          width: 5em;
+          height: 4em;
+          line-height: 4em;
+          float: left;
+          margin-left: 0em;
+          margin-right: 1em;
+          color: #333333;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+         }
+         .zhiye3{
+          width: 32%;
+          background-color: #ffffff;
+          height: 36em;
+          border:1px solid #eeeded;
+          overflow: hidden;
+
+
+         }
+         .zhiye3:hover .zhiye14{display: block;}
+         .zhiye14{
+          width: 32%;
+          position: relative;
+          background-color: #332a21;
+          height: 36em;
+          right: 25em;
+          opacity:0.7;
+
+          color: #ffffff;
+          text-align: center;
+          padding: 3em;
+          display: none;
+          z-index: 3;
+
+
+         }
+         .zhiye15{
+          height: 30%;
+          width: 100%;
+
+         }
+         .zhiye16{
+          height: 70%;
+          width: 100%;
+         }
+         .zhiye4{width: 100%;
+          height: auto;
+           border:1px solid #e2e2e2;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+        }
+        .zhiye5{
+          width: 10em;
+          height: 12em;
+          flex: none;
+         /* padding: 1em;*/
+          transform: scale(0.9,0.9);
+          display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+        .zhiye6{
+          width: 15em;
+          flex-grow: 1;
+          height: 10em;
+          display: flex;
+          padding-left: 1em;
+          padding-right: 1em;
+            justify-content:space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        .zhiye7{
+          width: 100%;
+          height: 3em;
+          line-height: 3em;
+        }
+        .zhiye8{
+          height: 4em;
+          flex: 1;
+          padding-top: 1em;
+          font-size: 13px;
+
+          line-height: 1.5em;
+        }
+        .zhiye9{
+          width: 49%;
+          height: 3em;
+          padding-left: 0.5em;
+          line-height: 3em;
+           border-right:1px solid #e2e2e2;
+           display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            flex: 1;
+
+        }
+        .zhiye10{
+          width: 30%;
+          height: 9em;
+          line-height: 9em;
+          text-align: center;
+           border-right:1px solid #e2e2e2;
+        }
+        .zhiye11{
+          width: 70%;
+          height: 9em;
+        }
+        .zhiye12{
+          width: 100%;
+          height: 3em;
+          line-height: 3em;
+          border-bottom:1px solid #e2e2e2;}
+          .zhiye13{
+            width: 100%;
+            height: 3em;
+            text-align: left;
+            line-height: 3em;
+          }
+         .dibu1{
+            float: left;
+            width: 15em;
+            height: 13em;
+            flex: 1;
+         }
+          .dibu2{
+            float: right;
+            width: 10em;
+            height: 10em;
+            margin-left: 15em;
+            color: #ffffff;
+            flex: none;
+
+         }
+         .dibu3{width: 100%;
+            color: #ffffff;
+            height: 6em;
+            line-height: 6em;}
+         .dibu4{
+            width: 45%;
+            float: left;
+            height: 3em;
+            line-height: 3em;
+         }
+         .dibu5{
+            width: 6em;
+            height: 0.15em;
+            background-color: #ffffff;
+            position:relative;
+            top: 2.2em;
+            z-index: 4;
+         }
+         
+
+         .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 43px;
+    height: 62px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 60px;
+    height: 48px;
+    background-position: -58px -5px;
+}
+
+.sprite-c {
+    width: 52px;
+    height: 55px;
+    background-position: -128px -5px;
+}
+
+.sprite-d {
+    width: 74px;
+    height: 74px;
+    background-position: -190px -5px;
+}
+
+.sprite-e {
+    width: 20px;
+    height: 20px;
+    background-position: -274px -5px;
+}
+
+.sprite-f {
+    width: 108px;
+    height: 108px;
+    background-position: -304px -5px;
+}
+
+.sprite-g {
+    width: 108px;
+    height: 108px;
+    background-position: -5px -123px;
+}
+
+.sprite-h {
+    width: 108px;
+    height: 108px;
+    background-position: -123px -123px;
+}
+
+.sprite-i {
+    width: 108px;
+    height: 108px;
+    background-position: -241px -123px;
+}
+
+.sprite-j {
+    width: 181px;
+    height: 85px;
+    background-position: -5px -241px;
+}
+
+.sprite-k {
+    width: 181px;
+    height: 85px;
+    background-position: -196px -241px;
+}
+
+.sprite-m {
+    width: 181px;
+    height: 85px;
+    background-position: -5px -336px;
+}
+
+.sprite-n {
+    width: 181px;
+    height: 85px;
+    background-position: -196px -336px;
+}
+
+.sprite-o {
+    width: 181px;
+    height: 85px;
+    background-position: -422px -5px;
+}
+
+.sprite-p {
+    width: 92px;
+    height: 92px;
+    background-position: -422px -100px;
+}
+
+.sprite-q {
+    width: 139px;
+    height: 139px;
+    background-position: -387px -202px;
+}
+
+.sprite-qq {
+    width: 26px;
+    height: 25px;
+    background-position: -613px -5px;
+}
+
+.sprite-s {
+    width: 107px;
+    height: 34px;
+    background-position: -524px -100px;
+}
+
+.sprite-sina {
+    width: 26px;
+    height: 25px;
+    background-position: -613px -40px;
+}
+
+.sprite-t {
+    width: 10px;
+    height: 10px;
+    background-position: -274px -40px;
+}
+
+.sprite-tudou {
+    width: 126px;
+    height: 39px;
+    background-position: -524px -144px;
+}
+
+.sprite-u {
+    width: 27px;
+    height: 47px;
+    background-position: -359px -144px;
+}
+
+.sprite-u1 {
+    width: 27px;
+    height: 46px;
+    background-position: -536px -193px;
+}
+
+.sprite-user {
+    width: 13px;
+    height: 13px;
+    background-position: -58px -75px;
+}
+
+.sprite-v {
+    width: 10px;
+    height: 10px;
+    background-position: -81px -75px;
+}
+
+.sprite-wechat {
+    width: 25px;
+    height: 25px;
+    background-position: -101px -75px;
+}
+
+.sprite-xinxin {
+    width: 16px;
+    height: 15px;
+    background-position: -136px -75px;
+}
+
+.sprite-y {
+    width: 16px;
+    height: 16px;
+    background-position: -162px -75px;
+}
+      a:link,
+      a:visited     
+      {
+      color:#ffffff;
+      text-decoration:none;
+      }
+
+p{text-align: left; padding-left: 1em;padding-right: 1em;}
+          /*  li{ float:left; list-style: none;}
+*/
+
+      </style>
+   </head>
+   <body style="background-color: #fafafa;">
+    <div class="box">
+     <header style="height: 2em; width: 100%;display: flex; flex-wrap: nowrap; justify-content: center;align-items: center; ">
+
+        <div class="telephone">
+        客服热线：010-594-78634
+        </div>
+        <div class="logo">
+       <div class="logo1">
+        <li class="sprite sprite-wechat"></li>
+        </div><div class="logo1">
+        <li class="sprite sprite-sina"></li>
+       </div>
+       <div class="logo1">
+        <li class="sprite sprite-qq"></li>
+        </div>
+       
+        </div>
+      </header> 
+      <div class="daohang">
+      <div class="daohang3">
+      <img src="e.png" width="109em" height="47em">
+      </div>
+      <div class="daohang1">
+      <a href="http://119.10.57.69:880/jnshu3958/task8/xiuzhen.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+         首页
+      
+      <div class="daohang2">
+      </div>
+      </button></a>
+      </div>
+
+       <div class="daohang1">
+       <a href="http://119.10.57.69:880/jnshu3958/task8/zhiwei.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+       职业<div class="daohang2">
+      </div>
+      </button></a>
+      </div>
+
+      <div class="daohang1">
+      <a href="http://119.10.57.69:880/jnshu3958/task8/qiye.html" ><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+      推荐
+      <div class="daohang2">
+      </div>
+      </button></a>
+      </div>
+		
+      <div class="daohang1"><button style="width: 4em;height: 6em;line-height: 6em;background-color: #29b078;color: #ffffff;border: none;">
+      关于
+      <div class="daohang2">
+      </div>
+      </button>
+      </div>
+
+
+ </div>
+ <div class="qiye1">
+<a href="http://119.10.57.69:880/jnshu3958/task8/xiuzhen.html" style="color: #333333;">首页></a><a style="color: #29b078">职位</a>
+ </div>
+ <div class="zhiye">
+ <div class="zhiye1">
+ <div class="zhiye2">
+ <p style="color: #999999 ;margin:0 ;padding:0">方向：</p>
+ </div>
+ <div class="zhiye2">
+ <button style="background-color: #29b078;color:#ffffff; width: 3em;height:2em;border: none;line-height: 2em;">全部</button>
+ </div>
+ <div class="zhiye2">
+ <button style="border: none;width: 6em;height: 2em;line-height: 2em;background-color: #ffffff;">前端开发</button>
+ </div>
+ <div class="zhiye2">
+
+  <button style="border: none;width: 6em;height: 2em;line-height: 2em;background-color: #ffffff;">后端开发</button>
+ </div>
+ <div class="zhiye2">
+  <button style="border: none;width: 6em;height: 2em;line-height: 2em;background-color: #ffffff;">移动开发</button>
+ </div>
+ <div class="zhiye2">
+  <button style="border: none;width: 6em;height: 2em;line-height: 2em;background-color: #ffffff;">整站开发</button>
+ </div>
+ <div class="zhiye2">
+  <button style="border: none;width: 6em;height: 2em;line-height: 2em;background-color: #ffffff;">运营维护</button>
+ </div>
+ </div>
+ <p style="text-align: left;height: 4em;line-height: 4em;"><b>前端开发方向</b></p>
+ <div class="zhiye1">
+ <div class="zhiye3">
+ <div class="zhiye4">
+ <div class="zhiye5">
+  <li class="sprite sprite-q"></li>
+ </div>
+ <div class="zhiye6">
+ <div class="zhiye7">
+ <b>Web前端工程师</b>
+ </div>
+ <div class="zhiye8">
+ Web前端开发工程师，只要职责是利用(x)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。
+ </div>
+ </div>
+ </div>
+ <div class="zhiye4">
+<div class="zhiye9">
+门槛<li style="float: left;margin-left: 0.5em;" class="sprite sprite-xinxin"></li>
+</div>
+<div class="zhiye9">
+难易程度<li style="float: left;margin-left: 0.5em;" class="sprite sprite-xinxin"></li><li style="float: left;margin-left: 0.5em;" class="sprite sprite-xinxin"></li>
+</div>
+ </div>
+ <div class="zhiye4">
+ <div class="zhiye9">
+ 成长周期 <div style="color: red;padding-left: 1em;"> 1~3</div>年
+ </div>
+ <div class="zhiye9">
+ 稀缺程度 <div style="color: red;padding-left: 0.7em;"> 345</div>家公司需要
+ </div>
+ </div>
+ <div class="zhiye4">
+ <div class="zhiye10">
+ 薪资待遇
+ </div>
+ <div class="zhiye11">
+ <div class="zhiye12">
+ <div style="float: left;padding-left: 1em"> 0-1年</div><div style="float: right;padding-right:1em">5k-10k/月</div>
+ </div>
+ <div class="zhiye12">
+ <div style="float: left;padding-left: 1em">1-3年</div><div style="float: right;padding-right:1em">10k-20k/月</div>
+ </div>
+ <div class="zhiye12">
+ <div style="float: left;padding-left: 1em">3-5年</div><div style="float: right;padding-right:1em">20k-50k/月</div>
+ </div>
+ </div>
+ </div>
+ <div class="zhiye4" style="justify-content: flex-start; padding-left: 2em; font-size: 15px">
+ 有<div style="color:red"> 286</div>人正在学
+ </div>
+<div class="zhiye4" style="color: #a1a1a1;line-height:2.3em;font-size: 13px;">
+提示：在你学习之前你应该已经掌握XXXXXX、XXXXX、XX、等语言基础
+</div>
+ </div>
+ <div class="zhiye14">
+ <div class="zhiye15">
+ ios工程师
+ </div>
+ <div class="zhiye16">
+ iOS是由苹果公司开发的移动操作系统[1]  。苹果公司最早于2007年1月9日的Macworld大会上公布这个系统，最初是设计给iPhone使用的，后来陆续套用到iPod touch、iPad以及Apple TV等产品上。iOS与苹果的Mac OS X操作系统一样，属于类Unix的商业操作系统。原本这个系统名为iPhone OS，因为iPad，iPhone，iPod touch都使用iPhone OS，所以2010WWDC大会上宣布改名为iOS（iOS为美国Cisco公司网络设备操作系统注册商标，苹果改名已获得Cisco公司授权）。
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+<footer style="background-color: #26a26f; width: 100%;
+padding-left:10%;padding-right:10%;height: 15em;display: flex;
+justify-content: space-between; align-items: center;flex-wrap: nowrap;          flex-direction: row; margin-top: 10em;">
+   <div class="dibu1">
+   <div class="dibu3">
+   技术树——改变你我
+   </div>
+   <div class="dibu3">
+   关于我们|练习我们|合作企业
+   </div>
+   </div>
+   <div class="dibu1">
+   <div class="dibu3">
+   旗下网站
+
+   </div>
+   <div class="dibu3">
+   <div class="dibu4">
+   草船云孵化器
+   </div>
+   <div class="dibu5">
+   </div>
+   <div class="dibu4">
+   最强IT特训营
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task3/mojing/mojing3.html"><span>葡萄藤轻游戏</span></a>
+   </div>
+   <div class="dibu4">
+   <a href="http://119.10.57.69:880/jnshu3958/task7/zuoyou.html"><span>桌游精灵</span></a>
+   </div>
+   </div>
+   </div>
+    <div class="dibu2">
+    微信公众平台
+    <li class="sprite sprite-p"></li>
+   </div>
+   
+
+</footer>
+<footer style="width: 100%;height: 2em;
+background-color: #26a26f;text-align: center;border-top: 2px solid #32c086;color: #ffffff;">
+  Copyright© 2015技术树 www.jnshu.com All Rights Reserved|京ICP备12005880号
+</footer>
+ </div>
+
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
