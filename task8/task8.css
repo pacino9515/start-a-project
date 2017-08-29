@@ -115,7 +115,41 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: nowrap;
+            box-shadow: 0px 0px 0px  0px #ffffff;
+
          }
+         .neirong15{
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            height:25em;
+           /* overflow: hidden;*/
+            background-color: #fafafa;
+            display: flex;
+            justify-content:center;
+            align-items: baseline;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            margin-bottom: 4em;
+
+         }
+          .neirong16{
+            flex: 1;
+            width:13em;
+            margin-left: 2em;
+            margin-right:2em;
+            height: 6em;
+           
+            text-align: center;
+            display: flex;
+           /* border: 1px solid #eeeded;*/
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+         }
+         .neirong13:hover{  box-shadow: 0px 0px 5px  3px #eeeded;}
+         .neirong16:hover{  box-shadow: 0px 0px 5px  3px #eeeded;}
          .neirong2{
             flex: 1;
             height: 5em;
@@ -141,6 +175,7 @@
             height: 9em;
             width: 9em;
             transform: scale(0.6,0.6);
+            box-shadow: 0px 0px 0px  0px #ffffff;
 
          }
          .neirong3{
@@ -195,12 +230,12 @@
             width: 80%;
             margin-left: 10%;
             margin-right: 10%;
-            height:15em;
+            height:10em;
             overflow: hidden;
             background-color: #fafafa;
             display: flex;
             justify-content:center;
-            align-items: baseline;
+            align-items: center;
             flex-wrap: nowrap;
             flex-direction: row;
             margin-bottom: 4em;
@@ -751,14 +786,23 @@ p{text-align: left; padding-left: 1em;padding-right: 1em;}
             align-items:center;
             flex-wrap: nowrap;
             flex-direction: row;
+             color: #29b078;
     
 
             }
+            .qiye13{width: 1em;
+                height: 1em;
+                display: none;
+                position: relative;
+                right:1em;
+                bottom:1em;}
+            .qiye5:hover{ color: #ff650e }
+            .qiye5:hover .qiye13{display: block;}
             .qiye6{width: 1em;
                 height: 1em;}
             .qiye7{width: 5em;
                 height: 2em;
-                color: #29b078;}
+               }
             .qiye8{width: 5em;
                 height: 2em;
                 color: #ff650e;}
