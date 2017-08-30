@@ -1,24 +1,28 @@
-         .box{width: 100%;}
+         .box{width: 100%;
+          overflow: hidden;}
+
          .telephone{
-            float: left;
+            
             color: #56bc8e;
-            margin-left: 10em;
+            margin-left: 5%;
             height: 2em;
+            width: 60%;
             line-height: 2em;
             flex-grow: 2;
             background-color: #fafafa;
          }
          .logo{
-            float: right;
-            width: 6em;
+            
+            width: 30%;
+            margin-right: 5%;
             padding-top: 0.3em;
             flex-grow: none;
            
-            margin-right:10em; 
+            /*margin-right:10%;*/ 
            /* padding-right: 9em;*/
          }
          .logo1{
-            float: left;
+            float: right;
             width: 2em;
             height: 2em;
             transform: scale(0.8,0.8);
@@ -135,9 +139,9 @@
          }
           .neirong16{
             flex: 1;
-            width:13em;
-            margin-left: 2em;
-            margin-right:2em;
+            width:15em;
+           /* margin-left: 2em;
+            margin-right:2em;*/
             height: 6em;
            
             text-align: center;
@@ -263,7 +267,9 @@
             align-items: center;
             flex-wrap: nowrap;
             flex-direction: row; 
+
          }
+         li{cursor:pointer;}
          .xuexi2{
             flex: 1;
             width: 5em;
@@ -802,10 +808,12 @@ p{text-align: left; padding-left: 1em;padding-right: 1em;}
                 height: 1em;}
             .qiye7{width: 5em;
                 height: 2em;
+                cursor:pointer;
                }
             .qiye8{width: 5em;
                 height: 2em;
-                color: #ff650e;}
+                color: #ff650e;
+              cursor:pointer;}
 
             .qiye9{width: 100%;
                 height: auto;
@@ -856,6 +864,10 @@ p{text-align: left; padding-left: 1em;padding-right: 1em;}
                 flex-direction: row;
                 color: #a7a7a7;
             }
+            @media only screen and (max-width: 768px) {
+
+            }
+    /* For mobile phones: */
         
 
   
