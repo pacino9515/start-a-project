@@ -321,16 +321,16 @@
            
          }
          .beijing1{
-            position: absolute;
-            top: 45%;
-            right:  3em;
-            z-index: 1;
+            position:relative;
+            top:-8.5em;
+            left:16em;
+            z-index: 2;
             transform: scale(0.6,0.6);
          }
          .beijing2{
-            position: absolute;
-           top: 45%;
-            left:3em;
+            position: relative;
+           top:-5em;
+            left:-3em;
             z-index: 1;
             transform: scale(0.6,0.6);
          }
