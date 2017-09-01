@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>护工工作主页</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <style type="text/css">
+    	.box{width: 100%;
+    		height: auto;
+    		overflow:hidden;}
+    	.daohang{width: 100%;
+    		height: 3em;
+    		background-color: #5fc0cd;
+            position: fixed;
+            text-align: center;
+            top:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;}
+            
+            .daohang2{
+            	position: absolute;
+            	right:  0.7em;
+            	transform: scale(0.6,0.6);
+            }
+            .daohang1{
+            	position: absolute;
+            	right: 50%;
+            	width: 4em;
+            	height: 2.2em;
+            	line-height: 2.2;
+            	color: #ffffff;
+            	background-color: #55a8b3;
+            	border-radius: 15%;
+            }
+            .daohang1:active{
+                z-index: 3;
+            }
+            .daohang3{
+            	position: relative;
+            	left: 1.7em;
+            	width: 4em;
+            	height: 2.2em;
+            	line-height: 2.2;
+            	color: #5fc0cd;
+            	background-color: #ffffff;
+            	border-radius: 15%;
+            }
+
+        .daohang3:active{
+            z-index: 3;
+        }
+
+
+        .dibu{height: 4em;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+       		text-align: center;
+        	display: flex;
+            align-items: stretch;
+            justify-content: space-around;
+            z-index: 1;
+            background-color: #f8fafb;
+            
+            /*padding-top: 1em;*/
+    }
+            .dibu1{
+            color: #85ced8;
+           /* flex-wrap: 1;*/
+            transform: scale(0.7,0.7)
+
+            }
+            .dibu3{
+           /* flex-wrap: 1;*/
+            transform: scale(0.7,0.7);
+            color: #999999;
+
+            }
+            .dibu2{
+            	width: 4em;
+            	height: 4em;
+            	/*flex-grow: none;*/
+            	background-color: #5fc0cd;
+            	border-radius: 50%;
+            	transform: scale(0.8,0.8)
+            }
+            li{list-style: none;}
+
+            body{padding-top: 3em;
+                padding-bottom:4em;}
+        .xiala{
+            width: 100%;
+            height: 3em;
+            color: #999999;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+       		align-items: center;
+            text-align: center;
+          /*  margin-left:auto;
+			margin-right:auto;*/
+
+
+        }
+     
+        .neirong{
+            width: 100%;
+            height: 7em;
+            padding-left: 1em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            border-top:1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+
+
+        }
+        .neirong1{
+            width: 65%;
+            height: 2em;
+            
+            color: #999999;
+            line-height: 2em;
+
+        }
+        .neirong4{
+        	float: left;
+        	transform: scale(0.8,0.8)
+        }
+        .neirong5{
+        	float: left;
+        	padding-left: 0.5em;
+        	width: 60%;
+        	overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+
+        }
+        .neirong2{
+            width: 65%;
+            height: 2em;
+          /*  float: left;*/
+            line-height: 2em;
+            padding-left: 2em;
+            color: #333333;
+            overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+
+        }
+        .neirong3{
+            color: #ff0000;
+            height: 6em;
+            width: 35%;
+            float: right;
+            line-height: 6em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+
+        }
+        .neirong6{
+        	float: right;
+        	flex-grow: 1;
+        	color: #e63b0e;
+
+        }
+       
+        div.test{
+        	text-overflow: ellipsis;
+        }
+        .neirong7{float: right;
+        	padding-right: 1em;
+        	flex-grow: none;
+         transform: scale(0.6,0.6);}
+   .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-a {
+    width: 42px;
+    height: 44px;
+    background-position: -5px -5px;
+}
+
+.sprite-b {
+    width: 24px;
+    height: 24px;
+    background-position: -57px -5px;
+}
+
+.sprite-c {
+    width: 19px;
+    height: 23px;
+    background-position: -91px -5px;
+}
+
+.sprite-d {
+    width: 46px;
+    height: 40px;
+    background-position: -120px -5px;
+}
+
+.sprite-e {
+    width: 50px;
+    height: 43px;
+    background-position: -166px -3px;
+}
+
+.sprite-f {
+    width: 42px;
+    height: 41px;
+    background-position: -226px -5px;
+}
+
+.sprite-h {
+    width: 13px;
+    height: 8px;
+    background-position: -278px -5px;
+}
+
+.sprite-i {
+    width: 19px;
+    height: 33px;
+    background-position: -301px -5px;
+}
+
+.dropdown{width: 32.8vw;
+    flex-grow: 1;
+text-align: center;
+float: left;}
+.navbar navbar-default{padding:0;margin: 0;
+background-color: #ffffff;}
+/*.ceshi{background-image: url("sprit");
+width: 413px;height: 44px;}
+.ceshi1{
+	width: */
+    .navbar-default{
+        background-color: #ffffff;
+    }
+.container-fluid{padding: 0;
+margin: }
+.navbar{margin-bottom: 0;}
+a{text-align: center;}
+    </style>
+
+
+</head>
+    <body>
+    
+    <div class="box">
+    <div class="daohang">
+    <div class="daohang1">找雇主
+    </div>
+    <div class="daohang3">找护工
+    </div>
+   
+<div class="daohang2">
+<i class="sprite sprite-a"></i></div>
+
+    </div>
+    
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+   
+    <div>
+        <ul class="nav navbar-nav" style="display: flex;justify-content: center;flex-flow: nowrap;" >
+            <li class="active"></li>
+            <li class="dropdown" style="">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    所在地 
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" style="width: 7em ;overflow:hidden;"> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">成都</a></li> <li class="divider" style="width:8em;"></li>
+                    <li style="width: 8em;"><a href="#">北京</a></li> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">重庆</a></li>
+                    <li  style="width: 8em;" class="divider"></li>
+                    <li style="width: 8em;"><a href="#">上海</a></li>
+                   
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    住宿
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu"> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">包吃住</a></li> 
+                    <li class="divider" style="width: 8em;"></li><li  style="width: 8em;"><a href="#">管饭</a></li> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">食宿自理</a></li>
+                    <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">管正餐</a></li>
+                    
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    病人情况 
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu"> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">严重</a></li> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">中等</a></li> <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">不严重</a></li>
+                    <li class="divider" style="width: 8em;"></li>
+                    <li style="width: 8em;"><a href="#">健康</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+          
+    
+    <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    65元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+      <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    35元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+      <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    25元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+      <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    25元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+    <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    35元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+    <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    20元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+    <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+   30元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+    <div class="neirong">
+    <div class="neirong3">
+   
+    <div class="neirong6">
+    25元/小时</div>
+     <div class="neirong7">
+    <i class="sprite sprite-i"></i></div>
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+  <i class="sprite sprite-b"></i>
+  </div><div class="neirong5">
+    服务日期</div>
+    </div>
+    
+    <div class="neirong2">
+    2015-7-5至2015-7-12
+    </div>
+    <div class="neirong1">
+    <div class="neirong4">
+    <i class="sprite sprite-c"></i></div>
+    <div class="neirong5">
+    北京.通州.果园</div>
+    </div>
+    </div>
+   
+
+
+<!-- <div class="bg-a">
+
+    </div> -->
+   
+    <div class="dibu">
+    <div class="dibu1">
+     <i class="sprite sprite-d"></i>
+     <p>首页</p>
+     </div>
+     <div class="dibu2">
+      <i class="sprite sprite-e"></i>
+      </div>
+      <div class="dibu3">
+       <i class="sprite sprite-f"></i>
+       <p>我的</p>
+       </div>
+    </div>
+    </div>
+              <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+            </body>
+            </html>
