@@ -1,13 +1,15 @@
 ﻿希望从来都是三分钟热度的我能坚持下去
 
-感谢师兄的指导
+
 
 
 
 task8 修真院-一个响应式的企业网站
+
 demo  https://pacino9515.github.io/start-a-project/task8/xiuzhen.html
 
 task7 桌游精灵-一个完整的webapp
+
 demo  https://pacino9515.github.io/start-a-project/task7/zuoyou.html
 
 task6 护工工作列表页-一个常见的移动端页面
