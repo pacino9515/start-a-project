@@ -1,0 +1,144 @@
+$color1:#5fc0cd;//导航背景、底部颜色
+$color2:#55a8b3;//找雇主
+$color3:#ffffff;//找护工
+$color4:#999999;//字体
+$color5:#e2e6e8;//条
+$color6:#333333;//日期
+$color7:#e1e5e7;//border
+$color8:#e63b0e;//时薪
+$color9:#f8fafb;//底栏背景色
+.left{display: flex;justify-content: flex-start;align-items: center;}
+.center{display: flex;justify-content: space-around;align-items: center;text-align: center}
+.center1{display: flex;justify-content: center;align-items: center;text-align: center}
+.column{display: flex;flex-direction: column;justify-content:center;align-items: center}
+a:link{text-decoration : none;
+color: $color1}
+a{text-decoration : none;
+  color: $color1}
+body{padding: 3em 0 4em 0;
+  margin: 0;}
+p{margin: 0}
+header{
+  width: 100%;
+  height: 3em;
+  background-color:$color1;
+  @extend .center1;
+  position: fixed;
+  top:0;
+  z-index: 11;
+  span{position:absolute;
+    right:1em;
+    width: 2em;
+    height: 3em;
+  transform:scale(0.7,0.7)}
+  .button1{
+    width: 5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 5px;
+    background-color:$color2;
+    color: $color3;}
+  .button2{
+    width: 5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 5px;
+    background-color:$color3;
+    color: $color2;
+
+  }
+}
+.neirong1{
+  width: 100%;
+  height: 2em;
+  @extend .center;
+  color: $color3;
+  border-bottom: 1px solid $color5;
+  select{
+    width: 33%;
+    height: 2em;
+    border: none;
+    padding-left:10%;
+    color: $color4;
+    flex-grow: 1;
+    option{
+      text-align: center;
+    }
+  }
+  span{
+    width:2px;
+    height: 1.5em;
+    background-color:$color5;}
+  }
+.neirong2{
+  width: 100%;
+  height: 7em;
+  @extend .left;
+  border-bottom: 1px solid $color7;
+  .neirong3{
+
+    width: 65%;
+    height: 7em;
+    @extend .column;
+    span{color: $color4;
+      padding-left: 2em;
+      width: 100%;
+      height: 2em;
+
+    @extend .left;
+
+    p{padding-left: 0.5em;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    color: $color4}}
+    p{padding-left: 4em;
+      color: $color6;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @extend .left;
+      height: 2em;}
+  }
+  .neirong4{
+    width: 35%;
+    height: 7em;
+    @extend .left;
+    p{color: $color8;display: inline-block}
+    img{transform: scale(0.7,0.7)}
+  }
+}
+footer{
+  width: 100%;
+  height: 4em;
+  @extend .center;
+  background-color: $color9;
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+
+  .span1{
+    width: 3em;
+    height: 4em;
+    color: $color1;
+    @extend .column;
+    img{transform: scale(0.8,0.8)}
+    }
+  .span2{
+    width: 3.5em;
+    height: 3.5em;border-radius: 50%;
+    background-color:$color1;
+    @extend .center1;
+    img{transform: scale(0.7,0.7);
+    padding:0 0 0.2em 0.3em;}
+  }
+  .span3{
+    width: 3em;
+    height: 4em;
+    color:$color4;
+  @extend .column;
+    img{transform: scale(0.8,0.8)}}
+
+}
