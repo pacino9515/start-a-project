@@ -8,7 +8,7 @@ p {
   padding: 0;
   margin: 0; }
 
-.concent, .xiala p, .neirong .quanquan, .dibu .dibu1 p, footer {
+.concent, .xiala p, .neirong .quanquan, .qiye .qiye2 p, .dibu .dibu1 p, footer {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -26,12 +26,18 @@ p {
   align-items: center;
   flex-direction: row; }
 
+.concent4, .qiye {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row; }
+
 .concent2, .daohang1 button {
   display: flex;
   justify-content: center;
   align-items: flex-start; }
 
-.left, .play, .neirong .neirong1 .neirong3 span, .neirong .neirong2, .dibu, .dibu .dibu2 p {
+.left, .play, .neirong .neirong1 .neirong3 span, .neirong .neirong2, .qiye .qiye1, .qiye .qiye2 ul li, .dibu, .dibu .dibu2 p {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
@@ -41,7 +47,7 @@ p {
   justify-content: flex-end;
   align-items: center; }
 
-.column, .neirong, .neirong .neirong1, .neirong .neirong1 .neirong2, .neirong .neirong1 .neirong3, .neirong .neirong4 .neirong5, .dibu .dibu3, h3 {
+.column, .neirong, .neirong .neirong1, .neirong .neirong1 .neirong2, .neirong .neirong1 .neirong3, .neirong .neirong4 .neirong5, .qiye .qiye2, .qiye .qiye3 .qiye4, .qiye .qiye3 .qiye4 li, .dibu .dibu3, h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +59,7 @@ p {
   justify-content: space-around;
   align-items: flex-start; }
 
-.column2, .dibu .dibu2 {
+.column2, .qiye .qiye3, .dibu .dibu2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -257,6 +263,74 @@ header {
       line-height: 4em;
       height: 4em;
       cursor: pointer; }
+
+.qiye {
+  width: 80%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 0em 10% 3em 10%;
+  background-color: #fafafa; }
+  .qiye .qiye1 {
+    width: 100%;
+    height: 4em; }
+    .qiye .qiye1 p {
+      color: #29b078; }
+  .qiye .qiye2 {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #ededed; }
+    .qiye .qiye2 p {
+      height: 3em;
+      width: 100%;
+      border-bottom: 1px solid #ededed; }
+    .qiye .qiye2 ul {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: auto; }
+      .qiye .qiye2 ul li {
+        list-style: none;
+        width: 100%;
+        height: 3em;
+        color: #29b078;
+        padding-left: 25%; }
+        .qiye .qiye2 ul li .quan {
+          width: 0.5em;
+          height: 0.5em;
+          margin-right: 1em;
+          display: inline-block;
+          border: 1px solid #ff640c;
+          border-radius: 50%; }
+      .qiye .qiye2 ul li:hover {
+        color: #ff640c; }
+      .qiye .qiye2 ul li:hover .quan {
+        background-color: #f9a372; }
+  .qiye .qiye3 {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #ededed; }
+    .qiye .qiye3 .qiye4 {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ededed;
+      flex-wrap: wrap; }
+      .qiye .qiye3 .qiye4 p {
+        color: #999999;
+        width: 90%;
+        padding: 0 10%; }
+      .qiye .qiye3 .qiye4 li {
+        width: 50%;
+        height: 3em;
+        margin: 3em auto; }
+  .qiye .p1 {
+    width: 90%;
+    padding: 1em 5%;
+    color: #999999;
+    text-indent: 25px; }
 
 .dibu {
   width: 80%;

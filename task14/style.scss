@@ -5,6 +5,10 @@ $color4:#333333;//文字一 、高效
 $color5:#999999;//文字二、
 $color6:#e2e2e2;//box-shadow
 $color7:#32c086;//底栏边框
+$color8:#ededed;
+$color9:#ff640c;//圆圈外檐
+$color10:#f9a372;//圈字体
+$color11:#d0d6d9;//border
 body{
   margin: 0;overflow-x: hidden;
   width: 100%;
@@ -15,6 +19,7 @@ p{padding: 0;
 .concent{display: flex;justify-content: center;align-items: center;}
 .concent1{display: flex;justify-content: space-around;align-items: center;flex-direction: row;}
 .concent3{display: flex;justify-content: space-between;align-items: center;flex-direction: row;}
+.concent4{display: flex;justify-content:space-between;align-items: flex-start;flex-direction: row;}
 .concent2{display: flex;justify-content: center;align-items: flex-start;}
 .left{display: flex;justify-content: flex-start;align-items: center}
 .right{display: flex;justify-content: flex-end;align-items: center}
@@ -61,51 +66,64 @@ header{
   }
   button:hover div{display:block}
 }
-.daohang2{
+
+.daohang2 {
+  position: relative;
+  display: inline-block;
   width: 100%;
   height: 3em;
+  display: none;
   background-color: $color2;
-  @extend .right;
-  flex-wrap: wrap;
+  color: $color1;
+  align-items: center;
+  margin-bottom: -0.2em;
+
+
   button{
     width: 3em;
+    float: right;
     height: 2.5em;
-    margin: 0.25em 0;
+
+    margin:0.5em 0;
     background-color: #52ba92;
     margin-right: 1em;
     border-radius: 4px;
-    border: none;@extend .column}
-
-    .tiao{
+    border: none;
+    @extend .column1}
+  .tiao{
     width: 2em;
-    height: 0.2em;
+
+
+    height: 0.3em;
     background-color: #ffffff;
-  margin: 0.1em}
-
-
-} ul{list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 8em;
-    background-color: $color2;
-    color: $color1;
-    width: 100%;
-    z-index: 5;
-    display: none;
-    li{color: $color1;
-      height: 2em;@extend .concent1;
-      border-top: 1px solid $color7}
-    li a{display: block;
-      color: $color1;
-      text-align: center;
     }
-  }
-button:hover ul{display: block}
+}
+.xiala {
+  display: none;
+  //position: absolute;
+  width: 100%;
+  background-color: $color2;
+  height: auto;
+
+  p{border:1px solid $color7;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+  @extend .concent}
+}
+.daohang2:hover .xiala {
+  display: block;
+}
+
+
 //轮播图
   .play {
     @extend .left;
     width: 300vw;
     height: auto;
+    position: relative;
+    top:0;
+
     animation: photo 12s ease-out infinite alternate;
     img{
       width: 100vw;
@@ -272,6 +290,139 @@ button:hover ul{display: block}
      }
    }
     }
+ .qiye{
+   width: 80%;
+   height: auto;
+   @extend .concent4;
+   flex-wrap: wrap;
+    padding: 0em 10% 3em 10%;
+   background-color: $color3;
+   .qiye1{
+     width: 100%;
+     height: 4em;
+     @extend .left;
+     p{color: $color2}
+   }
+   .qiye2{
+     width: 25%;
+     height: auto;
+     display: inline-block;
+     background-color: $color1;
+     border: 1px solid $color8;
+     @extend .column;
+     p{
+       height: 3em;
+       width: 100%;
+       border-bottom: 1px solid $color8;
+        @extend .concent;}
+     ul{padding: 0;
+       margin: 0;
+       width: 100%;
+       height: auto;
+
+       li{list-style: none;
+         width: 100%;
+         height: 3em;
+         color: $color2;
+         @extend .left;
+         padding-left: 25%;
+       .quan{
+         width: 0.5em;
+         height: 0.5em;
+         margin-right: 1em;
+         display: inline-block;
+         border: 1px solid $color9;
+        border-radius:50%;}
+       }
+       li:hover {color: $color9 }
+        li:hover .quan{
+          background-color: $color10}
+     }
+
+   }
+   .qiye3{
+     width: 70%;
+     height: auto;
+     display: inline-block;
+     background-color: $color1;
+     border: 1px solid $color8;
+     @extend .column2;
+     .qiye4{
+       width: 100%;
+       height: 10em;
+       border-bottom: 1px solid $color8;
+     @extend .left;
+       p{color: $color5;
+         width: 65%;
+       padding: 0 5%;}
+       li{@extend .concent;
+         width: 25%;
+         margin-left: 5%;
+       }
+     }
+   }
+   .p1{
+     width: 90%;
+   padding: 1em 5%;
+   color: $color5;
+   text-indent: 25px}
+    }
+ .zhiye{
+   width: 80%;
+   padding: 0 10%;
+   background-color: $color3;
+   height: auto;
+    .zhiye1{
+      width: 100%;
+      height: 3em;
+      line-height: 3em;
+      border-bottom: 1px solid $color11;
+
+      p{color: $color2;
+      display: inline-block;
+      }
+    }
+   .zhiye2{
+     width: 100%;
+     height: 3em;
+      line-height: 3em;
+     p{color: $color5;
+
+     display: inline-block}
+   button{border: none;
+     width: 5em;
+     margin-left: 1em;
+     border-radius: 3px;
+     background-color:$color3;
+     height: 2em;}
+     button:hover {
+       background-color: $color2;
+     color: $color1}
+     .button1{border: none;
+       width: 3em;
+       border-radius: 3px;
+       background-color:$color2;
+       color: $color1;
+       height: 2em;}
+   }
+   .zhiye3{
+     width: 100%;
+     height: 4em;
+     @extend .left;
+     border-bottom: 1px solid $color11;
+     font-size: 16px}
+   .zhiye4{
+     width: 100%;
+     height: auto;
+     @extend .concent3;
+     .zhiye5{
+       width: 30%;
+       height: 20em;
+       background-color: $color1;
+     }
+   }
+ }
+
  .dibu{
    width: 100%;
    height: 16em;
@@ -325,6 +476,7 @@ button:hover ul{display: block}
  border-top: 1px solid $color7;}
  h3{
    height: 5em;}
+ .clear{clear: both}
 
 
 

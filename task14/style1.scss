@@ -5,6 +5,9 @@ $color4:#333333;//文字一 、高效
 $color5:#999999;//文字二、
 $color6:#e2e2e2;//box-shadow
 $color7:#32c086;//底栏边框
+$color8:#ededed;
+$color9:#ff640c;//圆圈外檐
+$color10:#f9a372;//圈字体
 body{
   margin: 0;overflow-x: hidden;
   width: 100%;
@@ -15,6 +18,7 @@ p{padding: 0;
 .concent{display: flex;justify-content: center;align-items: center;}
 .concent1{display: flex;justify-content: space-around;align-items: center;flex-direction: row;flex-wrap: wrap}
 .concent3{display: flex;justify-content: space-between;align-items: center;flex-direction: row;}
+.concent4{display: flex;justify-content:space-between;align-items: flex-start;flex-direction: row;}
 .concent2{display: flex;justify-content: center;align-items: flex-start;}
 .left{display: flex;justify-content: flex-start;align-items: center}
 .right{display: flex;justify-content: flex-end;align-items: center}
@@ -286,6 +290,86 @@ header{
 
     }
   }
+}
+.qiye{
+  width: 80%;
+  height: auto;
+  @extend .concent4;
+  flex-wrap: wrap;
+  padding: 0em 10% 3em 10%;
+  background-color: $color3;
+  .qiye1{
+    width: 100%;
+    height: 4em;
+    @extend .left;
+    p{color: $color2}
+  }
+  .qiye2{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: $color1;
+    border: 1px solid $color8;
+    @extend .column;
+    p{
+      height: 3em;
+      width: 100%;
+      border-bottom: 1px solid $color8;
+      @extend .concent;}
+    ul{padding: 0;
+      margin: 0;
+      width: 100%;
+      height: auto;
+
+      li{list-style: none;
+        width: 100%;
+        height: 3em;
+        color: $color2;
+        @extend .left;
+        padding-left: 25%;
+        .quan{
+          width: 0.5em;
+          height: 0.5em;
+          margin-right: 1em;
+          display: inline-block;
+          border: 1px solid $color9;
+          border-radius:50%;}
+      }
+      li:hover {color: $color9 }
+      li:hover .quan{
+        background-color: $color10}
+    }
+
+  }
+  .qiye3{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: $color1;
+    border: 1px solid $color8;
+    @extend .column2;
+    .qiye4{
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid $color8;
+      @extend .column;
+      flex-wrap: wrap;
+      p{color: $color5;
+        width: 90%;
+        padding: 0 10%;}
+      li{@extend .column;
+        width: 50%;
+        height: 3em;
+        margin: 3em auto;
+
+      }
+    }
+  }
+  .p1{
+    width: 90%;
+    padding: 1em 5%;
+    color: $color5;
+    text-indent: 25px}
 }
 .dibu{
   width: 80%;
