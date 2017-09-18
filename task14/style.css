@@ -13,7 +13,7 @@ a {
   outline-style: none;
   color: #ffffff; }
 
-.concent, .xiala p, .neirong .quanquan, .qiye .qiye2 p, .qiye .qiye3 .qiye4 li, .dibu .dibu1 p, footer {
+.concent, .xiala p, .neirong .quanquan, .qiye .qiye2 p, .qiye .qiye3 .qiye4 li, footer {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -41,10 +41,15 @@ a {
   justify-content: center;
   align-items: flex-start; }
 
-.left, .play, .neirong .neirong1 .neirong3 span, .neirong .neirong2, .qiye .qiye1, .qiye .qiye2 ul li, .qiye .qiye3 .qiye4, .zhiye .zhiye3, .zhiye .zhiye4, .dibu, .dibu .dibu2 p {
+.left, .play, .neirong .neirong1 .neirong3 span, .neirong .neirong2, .qiye .qiye1, .qiye .qiye2 ul li, .qiye .qiye3 .qiye4, .zhiye .zhiye3, .zhiye .zhiye4, .dibu, .dibu .dibu1 p, .dibu .dibu2 p {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+
+.left1, .dibu .dibu1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; }
 
 .right, .daohang1 {
   display: flex;
@@ -57,7 +62,7 @@ a {
   justify-content: center;
   align-items: center; }
 
-.column1, .daohang2 button, .dibu .dibu1 {
+.column1, .daohang2 button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -532,15 +537,22 @@ header {
 
 .dibu {
   width: 100%;
-  height: 16em;
+  height: 12em;
   background-color: #29b078;
   color: #ffffff; }
   .dibu .dibu1 {
     width: 25%;
     height: 12em;
-    padding-left: 15%; }
+    padding-left: 15%;
+    flex-wrap: wrap; }
     .dibu .dibu1 p {
+      width: 100%;
       height: 6em;
+      cursor: pointer; }
+    .dibu .dibu1 .p1 {
+      width: 100%;
+      height: 6em;
+      margin-top: -3em;
       cursor: pointer; }
   .dibu .dibu2 {
     width: 25%;
