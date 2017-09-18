@@ -16,6 +16,7 @@ body{
 p{padding: 0;
   margin: 0;}
 a{text-decoration: none;
+  outline-style: none;
   color: $color1}
 
 
@@ -57,6 +58,7 @@ header{
     background-color:$color2;
     color: $color1;
     display: inline-block;
+    outline-style: none;
   }
   div{
     width: 3em;
@@ -295,6 +297,8 @@ header{
       line-height: 4em;
       height: 4em;
       cursor:pointer;
+      p{display:inline;
+        margin-left: -0.5em}
 
     }
   }
@@ -563,10 +567,23 @@ header{
 
       }
 
-
-
-
     }
+    .aaaa{
+      grid-column: 1/11;
+      grid-row:1/13;
+      display: none;
+      z-index: 11;
+      opacity: 0.8;
+      color: $color1;
+      background-color: #000;
+      h3{text-align: center;
+        height: 1em;}
+      p{font-size: 13px;
+        padding: 1em 10%;
+        text-indent: 18px;
+        line-height: 1.5em}}
+    .container:hover .aaaa{display: block;}
+
   }
 }
 .dibu{
