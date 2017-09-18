@@ -35,13 +35,22 @@ color: $color1}
 
 header{
   width: 100%;
-  height: 2em;
+  height: 1.5em;
   color:$color2;
-  @extend .concent1;
-  span{@extend .concent1;
-    li{display:inline-block}
+    span {
+      @extend .concent1;
+      float: right;
+      margin-right: 10%;
+      li {
+        display: inline-block
+      }
+    }
+      p{margin-left: 10%;
+      float: left;
+        line-height: 1.5em;
+      display: inline-block}
   }
-  }
+
 .daohang1{
   @extend .right;
   padding-right: 10%;
@@ -441,6 +450,7 @@ header{
        margin-top:3em;
        background-color: $color1;
        display:grid;
+       word-break:break-all;
        grid-template-columns:repeat(10, 1fr [col-start]) ;
        grid-template-rows: repeat(11, 2em);
        grid-gap: 2px;
@@ -627,7 +637,7 @@ header{
  }
  footer{
    width: 100%;
-   height: 2em;
+   height: 1.5em;
    background-color:$color2;
  color: $color1;
  @extend .concent;

@@ -18,7 +18,7 @@ a {
   justify-content: center;
   align-items: center; }
 
-.concent1, header, header span, .neirong .neirong1, .neirong .neirong2 .neirong3, .neirong .neirong2 .neirong3 span, .neirong .neirong2 .neirong3 p, .neirong .neirong4, .neirong .neirong9, .neirong .neirong9 .neirong6, .neirong .neirong8 {
+.concent1, header span, .neirong .neirong1, .neirong .neirong2 .neirong3, .neirong .neirong2 .neirong3 span, .neirong .neirong2 .neirong3 p, .neirong .neirong4, .neirong .neirong9, .neirong .neirong9 .neirong6, .neirong .neirong8 {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,9 +71,17 @@ a {
 
 header {
   width: 100%;
-  height: 2em;
+  height: 1.5em;
   color: #29b078; }
-  header span li {
+  header span {
+    float: right;
+    margin-right: 10%; }
+    header span li {
+      display: inline-block; }
+  header p {
+    margin-left: 10%;
+    float: left;
+    line-height: 1.5em;
     display: inline-block; }
 
 .daohang1 {
@@ -398,6 +406,7 @@ header {
       margin-top: 3em;
       background-color: #ffffff;
       display: grid;
+      word-break: break-all;
       grid-template-columns: repeat(10, 1fr [col-start]);
       grid-template-rows: repeat(11, 2em);
       grid-gap: 2px;
@@ -559,7 +568,7 @@ header {
 
 footer {
   width: 100%;
-  height: 2em;
+  height: 1.5em;
   background-color: #29b078;
   color: #ffffff;
   border-top: 1px solid #32c086; }

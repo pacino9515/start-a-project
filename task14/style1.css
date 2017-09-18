@@ -272,6 +272,7 @@ header {
       width: 50%;
       line-height: 4em;
       height: 4em;
+      text-align: center;
       cursor: pointer; }
       .neirong .neirong8 li p {
         display: inline;
