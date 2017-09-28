@@ -14,7 +14,6 @@
 
 ### 技能点
 * CSS模拟表单元素
-* select
 * 响应式
 
 ## [task9](https://pacino9515.github.io/start-a-project/task8/xiuzhen.html) 修真院--一个响应式的企业网站
