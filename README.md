@@ -32,7 +32,7 @@
 * 伪类
 ## [task6](https://pacino9515.github.io/start-a-project/task6/task6.html)  护工工作主页--一个最常见的移动端页面
 
-###技能点
+### 技能点
 * 雪碧图
 * bootstrap
 * 模拟下拉选框
@@ -43,17 +43,17 @@
 * flex布局
 ## [task4](https://pacino9515.github.io/start-a-project/task4/denglu.html)  登录页--一个最常见的移动端页面
 
-###技能点
+### 技能点
 * 表单样式
 * 定位
 ## [task3](https://pacino9515.github.io/start-a-project/task3/mojing1.html)  魔镜介绍页--一个最简单的移动端页面
 
-###技能点
+### 技能点
 * ps切图
 * 基本布局
 * 自适应
 
-##task2  认识开发必备工具
+## task2  认识开发必备工具
 
 ###技能点
 * 版本管理工具
@@ -61,7 +61,7 @@
 * FileZilla
 ## [task1](https://pacino9515.github.io/start-a-project/task1/jiugong.html)  九宫格--用html+CSS制作的第一个网页
 
-###技能点
+### 技能点
 * 盒子模型
 * 浮动
 * html标签
